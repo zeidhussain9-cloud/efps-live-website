@@ -886,7 +886,7 @@ function Footer() {
   return (
     <footer className="bg-white py-10">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
+        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
           <Logo />
           <a
             href={WHATSAPP}
@@ -903,9 +903,9 @@ function Footer() {
           style={{ borderColor: "#e4e8ed", color: MUTED }}
         >
           <span>© {new Date().getFullYear()} EasyFind Property Solutions</span>
-          <span>Find a property · Rent out · Manage · Prepare and care</span>
+          <span className="max-w-md leading-6">Find a property · Rent out · Manage · Prepare and care</span>
         </div>
-        <p className="mt-4 text-xs" style={{ color: MUTED }}>
+        <p className="mt-4 max-w-2xl text-xs leading-5" style={{ color: MUTED }}>
           Customer-facing brand of EASYFIND REALTY SOLUTIONS PRIVATE LIMITED.
         </p>
         <div
