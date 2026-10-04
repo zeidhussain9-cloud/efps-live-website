@@ -250,6 +250,56 @@ function ClusterPage() {
               <p className="mt-5 max-w-3xl leading-relaxed text-[#667384]">{cluster.fit}</p>
             </section>
 
+            <section className="overflow-hidden rounded-2xl border border-[#e4e8ed] bg-[#fffdfa]">
+              <div className="grid min-h-[250px] lg:grid-cols-[1.15fr_.85fr]">
+                <div className="relative bg-[#edf1f0] p-7 md:p-9">
+                  <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(90deg, rgba(35,67,95,.08) 1px, transparent 1px), linear-gradient(rgba(35,67,95,.08) 1px, transparent 1px)", backgroundSize: "34px 34px" }} />
+                  <div className="relative">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
+                      Local reading
+                    </p>
+                    <p className="mt-3 max-w-xl font-serif text-2xl font-semibold leading-tight text-[#23435f]">
+                      Read the corridor from the destination outward.
+                    </p>
+                    <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#667384]">
+                      EasyFind uses the road, work or school destination, residential pocket and last-mile approach as the practical frame—not a generic city guide.
+                    </p>
+                    <div className="mt-7 grid max-w-xl gap-3 sm:grid-cols-3">
+                      <div className="rounded-xl bg-white/80 p-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#b89445]">01</p>
+                        <p className="mt-2 text-sm font-semibold text-[#23435f]">Destination</p>
+                        <p className="mt-1 text-xs leading-relaxed text-[#667384]">Office, school or daily stop</p>
+                      </div>
+                      <div className="rounded-xl bg-white/80 p-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#b89445]">02</p>
+                        <p className="mt-2 text-sm font-semibold text-[#23435f]">Pocket</p>
+                        <p className="mt-1 text-xs leading-relaxed text-[#667384]">Exact sector, road or layout</p>
+                      </div>
+                      <div className="rounded-xl bg-white/80 p-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#b89445]">03</p>
+                        <p className="mt-2 text-sm font-semibold text-[#23435f]">Approach</p>
+                        <p className="mt-1 text-xs leading-relaxed text-[#667384]">Last-mile access and entry</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-[#23435f] p-7 text-white md:p-9">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
+                    EasyFind local brief
+                  </p>
+                  <p className="mt-4 font-serif text-2xl font-semibold leading-tight">
+                    {cluster.decision}
+                  </p>
+                  <a
+                    href="/#contact"
+                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#e3c976] px-5 py-3 text-sm font-semibold text-[#23435f]"
+                  >
+                    Talk through this pocket <ArrowRight size={15} />
+                  </a>
+                </div>
+              </div>
+            </section>
+
             <section>
               <div className="grid gap-4 md:grid-cols-3">
                 {cluster.signals.map((signal, index) => (
