@@ -501,30 +501,18 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
 
 function ProofStrip() {
   const facts = [
-    ["1,000+", "clients served"],
-    ["4.9 ★", "Google rating", MAPS],
-    ["About 5 years", "of operations"],
+    ["01", "Four clear service routes", "Find, rent out or sell, manage, or prepare and care."],
+    ["02", "Scope agreed before work", "Responsibilities, updates, and third-party coordination are clarified first."],
+    ["03", "One-business-day acknowledgement target", "Enquiries are acknowledged on that target; completion timing depends on scope."],
   ];
   return (
-    <section className="border-y bg-[#f7f5ef] py-8" aria-label="EasyFind facts">
-      <div className="mx-auto grid max-w-5xl gap-4 px-5 sm:grid-cols-3 md:px-8">
-        {facts.map(([value, label, href]) => (
-          <div
-            key={label}
-            className="border-l border-[#e4e8ed] pl-4 first:border-l-0 sm:first:border-l-0"
-          >
-            {href ? (
-              <a href={href} target="_blank" rel="noreferrer" className="block">
-                {" "}
-                <strong className="block font-serif text-2xl text-[#23435f]">{value}</strong>
-                <span className="text-xs text-[#667384]">{label} · Read on Google</span>
-              </a>
-            ) : (
-              <>
-                <strong className="block font-serif text-2xl text-[#23435f]">{value}</strong>
-                <span className="text-xs text-[#667384]">{label}</span>
-              </>
-            )}
+    <section className="border-y bg-[#f7f5ef] py-8" aria-label="How EasyFind works">
+      <div className="mx-auto grid max-w-6xl gap-5 px-5 sm:grid-cols-3 md:px-8">
+        {facts.map(([number, title, text]) => (
+          <div key={number} className="border-l border-[#e4e8ed] pl-4 first:border-l-0 sm:first:border-l-0">
+            <span className="font-serif text-xl text-[#b89445]">{number}</span>
+            <strong className="mt-2 block text-sm font-semibold text-[#23435f]">{title}</strong>
+            <span className="mt-2 block text-xs leading-relaxed text-[#667384]">{text}</span>
           </div>
         ))}
       </div>
@@ -613,8 +601,7 @@ function Reviews() {
           <div>
             <SectionTitle>Read what customers have shared.</SectionTitle>
             <p className="mt-4 max-w-2xl leading-relaxed" style={{ color: MUTED }}>
-              EasyFind currently shows a 4.9-star rating on its public Google Business Profile. Read
-              the original reviews there, where the source and current count remain visible.
+              Customer reviews are kept on the public Google Business Profile so the source, current rating, and review count remain visible and verifiable.
             </p>
           </div>
           <a
