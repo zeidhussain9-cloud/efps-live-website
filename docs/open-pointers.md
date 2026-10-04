@@ -12,18 +12,18 @@
 - [x] 10. **Property Listings:** Remove any implication that the website is a live property-inventory portal.
 - [x] 11. **Availability Claims:** Remove fake or unsupported live-availability implications.
 - [x] 12. **Investment Advisory:** Remove or reposition anything that conflicts with the approved EFPS positioning.
-- [ ] 13. **Generic Brokerage Copy:** Replace generic real-estate/broker language throughout.
-- [ ] 14. **Marketing Superlatives:** Remove unsupported claims such as “premier,” “trusted,” or similar wording.
-- [ ] 15. **Experience Proof:** Replace generic experience claims with practical evidence of how EasyFind works.
-- [ ] 16. **Expertise Proof:** Replace unsupported expertise statements with useful local/service knowledge.
-- [ ] 17. **Authority:** Strengthen verifiable company, Google, service, and operating information.
-- [ ] 18. **Trust Signals:** Make testimonials, ratings, reviews, company information, and policies current and factual.
-- [ ] 19. **Google Rating:** Update outdated Google review/rating information.
-- [ ] 20. **Testimonials:** Remove anything that feels generic, invented, or insufficiently authentic.
-- [ ] 21. **Process:** Refine the enquiry-to-closure process into a clear EasyFind-specific workflow.
-- [ ] 22. **Response Promise:** Clearly state the one-business-day enquiry acknowledgement expectation.
-- [ ] 23. **Fees:** Keep pricing case-by-case without unsupported public pricing claims.
-- [ ] 24. **Owner Updates:** Clearly communicate agreed updates and decision points.
+- [x] 13. **Generic Brokerage Copy:** Replace generic real-estate/broker language throughout.
+- [x] 14. **Marketing Superlatives:** Remove unsupported claims such as “premier,” “trusted,” or similar wording.
+- [x] 15. **Experience Proof:** Replace generic experience claims with practical evidence of how EasyFind works.
+- [x] 16. **Expertise Proof:** Replace unsupported expertise statements with useful local/service knowledge.
+- [x] 17. **Authority:** Strengthen verifiable company, Google, service, and operating information.
+- [x] 18. **Trust Signals:** Make testimonials, ratings, reviews, company information, and policies current and factual.
+- [x] 19. **Google Rating:** Update outdated Google review/rating information.
+- [x] 20. **Testimonials:** Remove anything that feels generic, invented, or insufficiently authentic.
+- [x] 21. **Process:** Refine the enquiry-to-closure process into a clear EasyFind-specific workflow.
+- [x] 22. **Response Promise:** Clearly state the one-business-day enquiry acknowledgement expectation.
+- [x] 23. **Fees:** Keep pricing case-by-case without unsupported public pricing claims.
+- [x] 24. **Owner Updates:** Clearly communicate agreed updates and decision points.
 - [ ] 25. **Local Strategy:** Replace broad Bengaluru coverage language with meaningful East Bengaluru positioning.
 - [ ] 26. **Local Clusters:** Establish the four approved geographic clusters.
 - [ ] 27. **Sarjapur Cluster:** Build useful verified Sarjapur Road cluster content.
@@ -72,6 +72,6 @@
 - [ ] 70. **Final Polish:** Review the entire site for consistency, restraint, clarity, trust, and premium presentation.
 
 
-## Completion note — Pointers 1–12
+## Completion note — Pointers 1–24
 
-Completed against the current repository implementation. The homepage now uses the approved four customer journeys as the primary hero decision structure. The four service sections cover the approved scope, the NRI route is discoverable from property management, property-listing/live-availability positioning is not used, and investment-advisory positioning is absent. Live production still needs deployment verification after this commit.
+Completed on the development branch. The homepage now uses the approved four customer journeys as the primary hero decision structure, avoids generic brokerage/unsupported promotional claims, and uses practical proof instead of invented statistics. The process now covers enquiry, scope agreement, coordination, and closure, with the one-business-day acknowledgement target stated. Fees remain case by case, owner updates are explicit, and Google reviews are linked to the public source rather than a hard-coded rating or review count. Legal identity, policies, contact routes, and the public Google profile remain discoverable.
