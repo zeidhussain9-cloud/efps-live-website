@@ -285,8 +285,6 @@ function Hero() {
             Your On-Ground
             <br />
             <span style={{ color: "#e3c976" }}>Property Partner</span>
-            <br />
-            in Bengaluru.
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/75 lg:mx-0">
             We help people find homes in Bengaluru and help property owners manage what matters—with
@@ -363,6 +361,33 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
           <p className="mt-6 max-w-xl text-base leading-relaxed" style={{ color: MUTED }}>
             {route.detail}
           </p>
+          {route.id === "manage-my-property" && (
+            <div
+              className="mt-8 rounded-xl border bg-[#eef2f2] p-5"
+              style={{ borderColor: "#dce4e5" }}
+            >
+              <p
+                className="text-xs font-semibold uppercase tracking-[.2em]"
+                style={{ color: GOLD }}
+              >
+                Owner guide
+              </p>
+              <p className="mt-2 text-base font-semibold" style={{ color: NAVY }}>
+                Before you appoint property-management help
+              </p>
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: MUTED }}>
+                Use our practical guide to agree access, repairs, updates, approvals, and handover
+                before the work starts.
+              </p>
+              <a
+                href="/guides/property-management-bengaluru"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4"
+                style={{ color: NAVY }}
+              >
+                Read the owner guide <ArrowRight size={15} />
+              </a>
+            </div>
+          )}
           {route.subsections && (
             <div className="mt-8 space-y-4">
               {route.subsections.map((subsection) => (
@@ -418,15 +443,6 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
           >
             {route.cta} <ArrowRight className="ml-2 inline" size={17} />
           </button>
-          {route.id === "manage-my-property" && (
-            <a
-              href="/guides/property-management-bengaluru"
-              className="ml-4 inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4"
-              style={{ color: NAVY }}
-            >
-              Read the owner guide <ArrowRight size={15} />
-            </a>
-          )}
         </div>
         <div
           className="rounded-2xl border p-7 shadow-sm md:p-9"
