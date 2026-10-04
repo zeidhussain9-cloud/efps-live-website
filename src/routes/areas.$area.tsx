@@ -225,7 +225,7 @@ function ClusterPage() {
 
       <section className="overflow-hidden bg-[#23435f] px-4 py-12 text-white sm:px-5 md:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid min-w-0 gap-8 xl:grid-cols-[1.15fr_.85fr] xl:items-end">
+          <div className="grid min-w-0 gap-8 xl:grid-cols-[1.15fr_.85fr] xl:items-stretch">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
                 East Bengaluru · local property guide
@@ -313,7 +313,7 @@ function ClusterPage() {
             </section>
 
             <section>
-              <div className="flex items-end justify-between gap-6">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                     The pockets
