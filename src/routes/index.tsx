@@ -271,13 +271,6 @@ function SectionTitle({ children, light = false }: { children: ReactNode; light?
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-32" style={{ background: HERO }}>
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, #fff 1px, transparent 0)",
-          backgroundSize: "34px 34px",
-        }}
-      />
       <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-5 pb-20 md:px-8 lg:grid-cols-2 lg:gap-16 lg:pb-28">
         <div className="mx-auto max-w-2xl pt-2 text-center lg:mx-0 lg:pt-12 lg:text-left">
           <Eyebrow light>EasyFind Property Solutions</Eyebrow>
