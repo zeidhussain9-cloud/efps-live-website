@@ -502,6 +502,40 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
   );
 }
 
+function ProofStrip() {
+  const facts = [
+    ["1,000+", "clients served"],
+    ["4.9 ★", "Google rating", MAPS],
+    ["16", "confirmed areas"],
+    ["About 3 years", "serving East Bengaluru"],
+  ];
+  return (
+    <section className="border-b bg-white py-5" aria-label="EasyFind facts">
+      <div className="mx-auto grid max-w-7xl gap-4 px-5 sm:grid-cols-4 md:px-8">
+        {facts.map(([value, label, href]) => (
+          <div
+            key={label}
+            className="border-l border-[#e4e8ed] pl-4 first:border-l-0 sm:first:border-l-0"
+          >
+            {href ? (
+              <a href={href} target="_blank" rel="noreferrer" className="block">
+                {" "}
+                <strong className="block font-serif text-2xl text-[#23435f]">{value}</strong>
+                <span className="text-xs text-[#667384]">{label} · Read on Google</span>
+              </a>
+            ) : (
+              <>
+                <strong className="block font-serif text-2xl text-[#23435f]">{value}</strong>
+                <span className="text-xs text-[#667384]">{label}</span>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Services() {
   return (
     <div id="services" className="scroll-mt-24">
@@ -535,18 +569,34 @@ function Areas() {
               <p className="mt-3 text-sm leading-relaxed text-white/65">
                 Bellandur · Kadubeesanahalli · Marathahalli · Yemalur · Whitefield · Hoodi · ITPL
               </p>
+              <a
+                href="/areas/bellandur"
+                className="mt-4 inline-flex text-sm font-semibold text-white underline underline-offset-4"
+              >
+                See area guidance <ArrowRight size={15} className="ml-2" />
+              </a>
             </div>
             <div className="border border-white/15 bg-white/5 p-6 md:p-7">
               <h3 className="font-serif text-xl text-white">The South-East choice</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65">
                 HSR Layout · Kudlu Gate · Sarjapur Road · Kasavanahalli · Harlur · Varthur
               </p>
+              <a
+                href="/areas/hsr-layout"
+                className="mt-4 inline-flex text-sm font-semibold text-white underline underline-offset-4"
+              >
+                See area guidance <ArrowRight size={15} className="ml-2" />
+              </a>
             </div>
             <div className="border border-white/15 bg-white/5 p-6 md:p-7">
               <h3 className="font-serif text-xl text-white">Connected areas</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65">
                 Mahadevapura · Panathur · Koramangala
               </p>
+              <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-white underline underline-offset-4">
+                <a href="/areas/whitefield">Whitefield</a>
+                <a href="/areas/koramangala">Koramangala</a>
+              </div>
             </div>
           </div>
         </div>
@@ -556,39 +606,28 @@ function Areas() {
 }
 
 function Reviews() {
-  const reviews = [
-    ["Very helpful and professional.", "Rishabh Kejariwal"],
-    ["Prompt service.", "Kirit"],
-    ["Professional and dependable.", "Shameer Ayyappan"],
-  ];
   return (
     <section className="py-20 md:py-28" style={{ background: "#fff" }}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <Eyebrow>What clients say</Eyebrow>
-        <SectionTitle>On-the-ground help, noticed by the people who use it.</SectionTitle>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {reviews.map(([quote, name]) => (
-            <blockquote key={name} className="border p-6" style={{ borderColor: "#e4e8ed" }}>
-              <p className="font-serif text-2xl leading-tight" style={{ color: NAVY }}>
-                “{quote}”
-              </p>
-              <footer className="mt-7 text-xs leading-relaxed" style={{ color: MUTED }}>
-                — {name}
-                <br />
-                Google Business Profile
-              </footer>
-            </blockquote>
-          ))}
+        <Eyebrow>Google Business Profile</Eyebrow>
+        <div className="flex flex-col gap-6 rounded-2xl border border-[#e4e8ed] bg-[#f7f5ef] p-7 md:flex-row md:items-center md:justify-between md:p-9">
+          <div>
+            <SectionTitle>Read what customers have shared.</SectionTitle>
+            <p className="mt-4 max-w-2xl leading-relaxed" style={{ color: MUTED }}>
+              EasyFind currently shows a 4.9-star rating on its public Google Business Profile. Read
+              the original reviews there, where the source and current count remain visible.
+            </p>
+          </div>
+          <a
+            href={MAPS}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold"
+            style={{ background: NAVY, color: "white" }}
+          >
+            Read reviews on Google <ArrowRight size={15} />
+          </a>
         </div>
-        <a
-          href={MAPS}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-7 inline-flex items-center gap-2 text-sm font-semibold"
-          style={{ color: NAVY }}
-        >
-          Read more on Google <ArrowRight size={15} />
-        </a>
       </div>
     </section>
   );
@@ -1044,11 +1083,34 @@ function Index() {
           name="description"
           content="EasyFind helps people find homes and helps property owners manage what matters—with a clear point of contact and practical support."
         />
-        <link rel="canonical" href="https://easyfindprops.com" />
+        <link rel="canonical" href="https://www.easyfindprops.com/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            name: "EasyFind Property Solutions",
+            legalName: "EASYFIND REALTY SOLUTIONS PRIVATE LIMITED",
+            url: "https://www.easyfindprops.com/",
+            logo: "https://www.easyfindprops.com/easyfind-logo.jpg",
+            image: "https://www.easyfindprops.com/og-image.jpg",
+            telephone: "+919148338801",
+            email: "info@easyfindprops.com",
+            areaServed: [
+              "Bellandur",
+              "Whitefield",
+              "HSR Layout",
+              "Marathahalli",
+              "Sarjapur Road",
+              "Koramangala",
+            ],
+            sameAs: ["https://maps.app.goo.gl/aFny22T8D57v5dzK8"],
+          })}
+        </script>
       </Helmet>
       <Header />
       <main>
         <Hero />
+        <ProofStrip />
         <Services />
         <Areas />
         <Reviews />

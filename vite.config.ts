@@ -13,6 +13,11 @@ const staticRoutes = [
   "legal/accessibility",
   "customer-protection",
   "guides/property-management-bengaluru",
+  "nri-property-management-bengaluru",
+  "areas/bellandur",
+  "areas/hsr-layout",
+  "areas/whitefield",
+  "areas/koramangala",
 ];
 
 function staticSpaRoutes() {

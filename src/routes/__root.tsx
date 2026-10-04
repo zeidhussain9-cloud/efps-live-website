@@ -76,36 +76,6 @@ function RootComponent() {
         <Helmet>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>EasyFind Property Solutions | Your On-Ground Property Partner in Bengaluru</title>
-          <meta
-            name="description"
-            content="EasyFind helps people find homes and helps property owners manage what matters—with clear, practical support."
-          />
-          <meta name="author" content="EasyFind Property Solutions" />
-          <meta
-            property="og:title"
-            content="EasyFind Property Solutions | Your On-Ground Property Partner in Bengaluru"
-          />
-          <meta
-            property="og:description"
-            content="EasyFind helps people find homes and helps property owners manage what matters—with clear, practical support."
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://easyfindprops.com" />
-          <meta property="og:image" content="https://easyfindprops.com/og-image.jpg" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content="EasyFind Property Solutions | Your On-Ground Property Partner in Bengaluru"
-          />
-          <meta
-            name="twitter:description"
-            content="EasyFind helps people find homes and helps property owners manage what matters—with clear, practical support."
-          />
-          <meta name="twitter:image" content="https://easyfindprops.com/og-image.jpg" />
-
           <link rel="icon" href="/easyfind-logo.webp" type="image/webp" />
           <link rel="canonical" href="https://easyfindprops.com" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
