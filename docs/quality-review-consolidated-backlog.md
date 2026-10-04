@@ -144,3 +144,31 @@ The current tool session cannot directly fetch the Render subdomain response bod
 
 This backlog is derived from the supplied EasyFind quality reviews and the project source-of-truth instructions. Conflicting recommendations have been retained only as verification questions, not as facts.
 
+
+
+## Set 2 execution record — Business identity, history and regulatory truth
+
+### Verified evidence
+- The project brief states that EasyFind has served customers in East Bengaluru for about 3 years and that the business was incorporated as EASYFIND REALTY SOLUTIONS PRIVATE LIMITED in April 2026.
+- Public corporate-registry evidence identifies EASYFIND REALTY SOLUTIONS PRIVATE LIMITED, CIN U68100KA2026PTC219755, incorporated on 23 April 2026, with registered address 154, 1st Main, Vinayaka Layout, Silver County Road, Bangalore South, Bangalore, Karnataka 560102. This independently corroborates the company name, CIN, incorporation date and registered-office address.
+- The project brief explicitly instructs that the site should not publish a RERA claim and that the company is not RERA-registered. The current official K-RERA portal exposes an agent-status search, but the agent-status endpoint timed out in the available web access. Therefore no RERA registration number or positive regulatory claim has been published.
+- The project brief says not to publish founder/team names or bios in this release. No independently verified accountable-person identity was available from the sources checked.
+
+### Implemented on development
+- Corrected the Legal Notice history from “about 5 years” to “about 3 years”.
+- Corrected the incorporation wording to the verified date: 23 April 2026.
+- Kept the legal identity and CIN visible.
+- Added the verified registered office to the homepage footer.
+- Removed the homepage embedded office map because its existing coordinates pointed to the previously used Prestige Atlanta/Koramangala location, which the project brief explicitly says must not appear as the operating office.
+- Replaced that map block with a service-area statement and Google Business Profile link, avoiding an unverified physical-office claim.
+- No RERA registration claim or registration number was added.
+
+### Development deployment evidence
+- History correction commit: `ab96f84530423c26dcf176a4e16fa5bb0fb73dec`
+- Registered-office/map correction commit: `fa55fd5b45d9487afc478b398f0279bae926fcf7`
+- Latest development deployment for the second commit is being built on service `srv-db19vcvavr4c73auv3c0`.
+- Production/main remains untouched.
+
+### Remaining Set 2 blockers
+- Accountable person / complaint-escalation identity cannot be added truthfully without a verified name and role. The project brief explicitly withholds founder/team identity from this release.
+- A direct public K-RERA agent-record confirmation could not be completed because the official agent-status endpoint timed out. No regulatory claim has been published as a workaround.
