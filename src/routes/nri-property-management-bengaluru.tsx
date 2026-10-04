@@ -188,10 +188,32 @@ function NriPropertyManagement() {
             </section>
             <section>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
-                Areas we cover
+                East Bengaluru coverage
               </p>
-              <p className="mt-3 leading-relaxed text-[#667384]">
-                {areas.join(", ")}. Address-level coverage is confirmed before work starts.
+              <h2 className="mt-3 font-serif text-3xl font-semibold text-[#23435f]">
+                The four local clusters we organise around.
+              </h2>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {[
+                  ["Sarjapur Road", "/areas/sarjapur-road-cluster"],
+                  ["Bellandur–Marathahalli", "/areas/bellandur-marathahalli-cluster"],
+                  ["Whitefield–Mahadevapura", "/areas/whitefield-mahadevapura-cluster"],
+                  ["HSR–Hosur Road", "/areas/hsr-hosur-road-cluster"],
+                ].map(([name, href]) => (
+                  <a
+                    key={href}
+                    href={href}
+                    className="rounded-xl border border-[#e4e8ed] bg-white p-4 text-sm font-semibold text-[#23435f] transition hover:-translate-y-0.5"
+                  >
+                    {name}
+                    <span className="mt-1 block text-xs font-normal text-[#667384]">
+                      Open the local cluster guide
+                    </span>
+                  </a>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-[#667384]">
+                Current working areas include {areas.join(", ")}. Address-level coverage is confirmed before work starts.
               </p>
             </section>
           </article>
