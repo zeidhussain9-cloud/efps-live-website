@@ -34,7 +34,7 @@ const areas = [
 
 function PropertyManagementGuide() {
   return (
-    <div className="min-h-screen bg-[#f7f5ef] text-[#223044]">
+    <div className="ef-page">
       <Helmet>
         <title>Property Management in Bengaluru: A Practical Owner&apos;s Guide | EasyFind</title>
         <meta
@@ -48,7 +48,7 @@ function PropertyManagementGuide() {
       </Helmet>
       <InformationHeader />
 
-      <section className="overflow-hidden bg-[#23435f] px-5 py-14 text-white md:px-8 md:py-20">
+      <section className="overflow-hidden bg-brand-navy px-5 py-14 text-white md:px-8 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
@@ -97,7 +97,7 @@ function PropertyManagementGuide() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-6xl px-5 py-12 sm:px-5 md:px-8 md:py-16">
+      <main className="ef-container py-12 md:py-16">
         <div className="grid gap-12 xl:grid-cols-[1.08fr_.92fr] lg:items-start">
           <article className="space-y-16">
             <section className="grid gap-4 border-y border-[#dfe4e7] py-5 text-sm sm:grid-cols-3">
@@ -107,41 +107,41 @@ function PropertyManagementGuide() {
             </section>
 
             <section>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
                 The owner’s question
               </p>
-              <h2 className="mt-3 max-w-2xl font-serif text-3xl font-semibold leading-tight text-[#23435f] md:text-4xl">
+              <h2 className="mt-3 max-w-2xl font-serif text-3xl font-semibold leading-tight text-brand-navy md:text-4xl">
                 What work needs doing, and who is responsible for each step?
               </h2>
-              <p className="mt-5 max-w-2xl leading-relaxed text-[#667384]">
+              <p className="mt-5 max-w-2xl leading-relaxed text-brand-muted">
                 A tenant message needs a response. A visitor needs access. A repair needs a quote
                 and approval. A vacant home needs checking before the next handover. These are
                 separate jobs, and a useful property-management brief names each one.
               </p>
-              <p className="mt-4 max-w-2xl leading-relaxed text-[#667384]">
+              <p className="mt-4 max-w-2xl leading-relaxed text-brand-muted">
                 That is what you should be able to see before you appoint support: the agreed scope,
                 the person responsible for the next step, and the update you will receive.
               </p>
             </section>
 
-            <section id="the-easyfind-way" className="rounded-2xl bg-white p-5 shadow-sm sm:p-6 md:p-8">
+            <section id="the-easyfind-way" className="rounded-2xl ef-panel-soft p-5 shadow-sm sm:p-6 md:p-8">
               <div className="flex items-start gap-4">
-                <ShieldCheck className="mt-1 shrink-0 text-[#b89445]" size={23} />
+                <ShieldCheck className="mt-1 shrink-0 text-brand-gold" size={23} />
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
                     What EasyFind can coordinate
                   </p>
-                  <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-[#23435f]">
+                  <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-brand-navy">
                     A written brief, on-the-ground follow-up, and an owner update.
                   </h2>
-                  <p className="mt-4 leading-relaxed text-[#667384]">
+                  <p className="mt-4 leading-relaxed text-brand-muted">
                     EasyFind Property Solutions helps owners define the property need, coordinate
                     the agreed work, and receive a clear update. We do not take over every decision.
                     We make the responsibility, approval point, and next action visible.
                   </p>
                 </div>
               </div>
-              <div className="mt-8 grid gap-6 border-t border-[#e4e8ed] pt-7 sm:grid-cols-3">
+              <div className="mt-8 grid gap-6 border-t border-brand-border pt-7 sm:grid-cols-3">
                 <ProcessStep
                   number="01"
                   title="Write the brief"
@@ -242,7 +242,7 @@ function PropertyManagementGuide() {
                   ]}
                 />
               </div>
-              <p className="mt-5 text-sm leading-relaxed text-[#667384]">
+              <p className="mt-5 text-sm leading-relaxed text-brand-muted">
                 For owners elsewhere in India or abroad, the exact scope, response rhythm, and
                 records should be agreed for the property, not assumed from a package name.
               </p>
@@ -263,18 +263,18 @@ function PropertyManagementGuide() {
                   <a
                     key={href}
                     href={href}
-                    className="rounded-xl border border-[#e4e8ed] bg-white p-5 transition hover:-translate-y-0.5"
+                    className="rounded-xl border border-brand-border ef-panel-soft p-5 transition hover:-translate-y-0.5"
                   >
-                    <p className="font-serif text-xl font-semibold text-[#23435f]">{name}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-[#667384]">{detail}</p>
-                    <span className="mt-3 block text-sm font-semibold text-[#23435f] underline underline-offset-4">
+                    <p className="font-serif text-xl font-semibold text-brand-navy">{name}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-brand-muted">{detail}</p>
+                    <span className="mt-3 block text-sm font-semibold text-brand-navy underline underline-offset-4">
                       Open cluster guide
                     </span>
                   </a>
                 ))}
               </div>
-              <div className="mt-6 flex gap-3 rounded-xl border border-[#e4e8ed] bg-[#fbfaf6] p-4 text-sm leading-relaxed text-[#667384]">
-                <MapPin size={18} className="mt-0.5 shrink-0 text-[#b89445]" />
+              <div className="mt-6 flex gap-3 rounded-xl border border-brand-border bg-[#fbfaf6] p-4 text-sm leading-relaxed text-brand-muted">
+                <MapPin size={18} className="mt-0.5 shrink-0 text-brand-gold" />
                 <span>
                   Current areas also include Varthur, Panathur, Yemalur, Harlur, Kasavanahalli,
                   Koramangala, Kudlu Gate and nearby pockets. Tell us the address and situation first;
@@ -317,7 +317,7 @@ function PropertyManagementGuide() {
           </article>
 
           <aside className="space-y-5 lg:sticky lg:top-6">
-            <div className="rounded-2xl border border-[#dfe4e7] bg-[#23435f] p-6 text-white shadow-sm md:p-8">
+            <div className="rounded-2xl border border-[#dfe4e7] bg-brand-navy p-6 text-white shadow-sm md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
                 Your appointment check
               </p>
@@ -349,8 +349,8 @@ function PropertyManagementGuide() {
               </a>
             </div>
             <div className="rounded-2xl bg-[#e9eff1] p-6 md:p-8">
-              <p className="text-sm font-semibold text-[#23435f]">A note before you act</p>
-              <p className="mt-2 text-sm leading-relaxed text-[#667384]">
+              <p className="text-sm font-semibold text-brand-navy">A note before you act</p>
+              <p className="mt-2 text-sm leading-relaxed text-brand-muted">
                 Last updated: October 2026. General guidance, not legal advice. Confirm the scope,
                 documents, and responsibilities for your own property before proceeding.
               </p>
@@ -367,7 +367,7 @@ function PropertyManagementGuide() {
 function QuickFact({ label, text }: { label: string; text: string }) {
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#b89445]">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-gold">{label}</p>
       <p className="mt-1 leading-relaxed text-[#446274]">{text}</p>
     </div>
   );
@@ -376,30 +376,30 @@ function QuickFact({ label, text }: { label: string; text: string }) {
 function ProcessStep({ number, title, text }: { number: string; title: string; text: string }) {
   return (
     <div>
-      <p className="font-serif text-2xl text-[#b89445]">{number}</p>
-      <p className="mt-2 font-semibold text-[#23435f]">{title}</p>
-      <p className="mt-1 text-sm leading-relaxed text-[#667384]">{text}</p>
+      <p className="font-serif text-2xl text-brand-gold">{number}</p>
+      <p className="mt-2 font-semibold text-brand-navy">{title}</p>
+      <p className="mt-1 text-sm leading-relaxed text-brand-muted">{text}</p>
     </div>
   );
 }
 
 function WorkCard({ title, text }: { title: string; text: string }) {
   return (
-    <div className="rounded-xl border border-[#e4e8ed] bg-white p-5">
-      <p className="font-serif text-xl font-semibold text-[#23435f]">{title}</p>
-      <p className="mt-2 text-sm leading-relaxed text-[#667384]">{text}</p>
+    <div className="rounded-xl border border-brand-border ef-panel-soft p-5">
+      <p className="font-serif text-xl font-semibold text-brand-navy">{title}</p>
+      <p className="mt-2 text-sm leading-relaxed text-brand-muted">{text}</p>
     </div>
   );
 }
 
 function ChecklistCard({ title, items }: { title: string; items: string[] }) {
   return (
-    <div className="rounded-xl border border-[#e4e8ed] bg-white p-5">
-      <p className="font-semibold text-[#23435f]">{title}</p>
-      <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#667384]">
+    <div className="rounded-xl border border-brand-border ef-panel-soft p-5">
+      <p className="font-semibold text-brand-navy">{title}</p>
+      <ul className="mt-3 space-y-2 text-sm leading-relaxed text-brand-muted">
         {items.map((item) => (
           <li key={item} className="flex gap-2">
-            <Check size={16} className="mt-0.5 shrink-0 text-[#b89445]" />
+            <Check size={16} className="mt-0.5 shrink-0 text-brand-gold" />
             {item}
           </li>
         ))}
@@ -421,13 +421,13 @@ function BoundaryCard({
     <div
       className={`rounded-xl border p-5 ${good ? "border-[#dce8df] bg-[#f5faf6]" : "border-[#eadfd3] bg-[#fffaf4]"}`}
     >
-      <p className="font-semibold text-[#23435f]">{title}</p>
-      <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#667384]">
+      <p className="font-semibold text-brand-navy">{title}</p>
+      <ul className="mt-3 space-y-2 text-sm leading-relaxed text-brand-muted">
         {items.map((item) => (
           <li key={item} className="flex gap-2">
             <Check
               size={16}
-              className={`mt-0.5 shrink-0 ${good ? "text-[#3c7a52]" : "text-[#b89445]"}`}
+              className={`mt-0.5 shrink-0 ${good ? "text-[#3c7a52]" : "text-brand-gold"}`}
             />
             {item}
           </li>
@@ -449,14 +449,14 @@ function GuideSection({
   return (
     <section>
       <div className="flex gap-4">
-        <span className="pt-1 text-xs font-semibold tracking-[0.16em] text-[#b89445]">
+        <span className="pt-1 text-xs font-semibold tracking-[0.16em] text-brand-gold">
           {number}
         </span>
         <div>
-          <h2 className="font-serif text-3xl font-semibold leading-tight text-[#23435f] md:text-4xl">
+          <h2 className="font-serif text-3xl font-semibold leading-tight text-brand-navy md:text-4xl">
             {title}
           </h2>
-          <div className="mt-4 max-w-2xl leading-relaxed text-[#667384]">{children}</div>
+          <div className="mt-4 max-w-2xl leading-relaxed text-brand-muted">{children}</div>
         </div>
       </div>
     </section>
@@ -473,11 +473,11 @@ function GuideQuestion({
   children: ReactNode;
 }) {
   return (
-    <section className="flex gap-4 border-b border-[#e4e8ed] pb-7">
-      <span className="pt-1 text-xs font-semibold tracking-[0.16em] text-[#b89445]">{number}</span>
+    <section className="flex gap-4 border-b border-brand-border pb-7">
+      <span className="pt-1 text-xs font-semibold tracking-[0.16em] text-brand-gold">{number}</span>
       <div>
-        <h3 className="font-serif text-2xl font-semibold text-[#23435f]">{title}</h3>
-        <p className="mt-2 leading-relaxed text-[#667384]">{children}</p>
+        <h3 className="font-serif text-2xl font-semibold text-brand-navy">{title}</h3>
+        <p className="mt-2 leading-relaxed text-brand-muted">{children}</p>
       </div>
     </section>
   );
