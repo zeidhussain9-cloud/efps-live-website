@@ -157,3 +157,27 @@
     color: var(--color-foreground);
   }
 }
+
+
+@layer base {
+  html {
+    min-width: 320px;
+    overflow-x: clip;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  img, svg, video, iframe {
+    max-width: 100%;
+  }
+
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, p, a, span, li {
+    overflow-wrap: anywhere;
+  }
+}
