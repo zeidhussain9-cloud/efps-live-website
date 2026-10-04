@@ -284,7 +284,7 @@ function Hero() {
           <h1 className="font-serif text-5xl font-semibold leading-[1.04] tracking-tight text-white sm:text-6xl">
             Your On-Ground
             <br />
-            <span style={{ color: "#e3c976" }}>Property Partner</span>
+            <span style={{ color: "#e3c976" }}> Property Partner</span>
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/75 lg:mx-0">
             We help people find homes and help owners rent out, manage, and prepare their property.
@@ -303,18 +303,6 @@ function Hero() {
               className="rounded-full border border-white/35 px-6 py-3.5 font-semibold text-white"
             >
               I own a property
-            </button>
-          </div>
-          <div className="mt-7 border-l border-[#e3c976] pl-4 text-left text-sm leading-relaxed text-white/70">
-            <span className="font-semibold text-white">Own a property?</span> Start with the
-            management route to see the work we can coordinate, the updates you can expect, and what
-            needs to be agreed first.{" "}
-            <button
-              type="button"
-              onClick={() => scrollTo("#manage-my-property")}
-              className="font-semibold text-[#e3c976] underline underline-offset-4"
-            >
-              See the owner route
             </button>
           </div>
         </div>

@@ -48,7 +48,7 @@ function PropertyManagementGuide() {
       </Helmet>
       <InformationHeader />
 
-      <section className="overflow-hidden bg-[#1b354b] px-5 py-14 text-white md:px-8 md:py-20">
+      <section className="overflow-hidden bg-[#23435f] px-5 py-14 text-white md:px-8 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
