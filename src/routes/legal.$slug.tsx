@@ -75,6 +75,14 @@ const pages = {
         "EasyFind Property Solutions is the customer-facing name of EASYFIND REALTY SOLUTIONS PRIVATE LIMITED.",
       ],
       [
+        "Legal identity and registered office",
+        "EasyFind Property Solutions is the customer-facing name of EASYFIND REALTY SOLUTIONS PRIVATE LIMITED. CIN: U68100KA2026PTC219755. Registered office: 154, 1st Main, Vinayaka Layout, Silver County Road, HSR Layout, Bangalore South, Bangalore 560102, Karnataka, India.",
+      ],
+      [
+        "History",
+        "EasyFind has served customers in East Bengaluru for about 3 years. The business was incorporated as EASYFIND REALTY SOLUTIONS PRIVATE LIMITED in April 2026.",
+      ],
+      [
         "Nature of information",
         "References to areas, services, reviews, maps, or local context are provided for practical guidance. They do not constitute a valuation, investment recommendation, legal advice, tax advice, or promise of a particular result.",
       ],

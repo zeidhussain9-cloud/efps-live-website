@@ -44,6 +44,9 @@ export function InformationFooter() {
           <a href="/guides/property-management-bengaluru" className="underline underline-offset-2">
             Property guides
           </a>
+          <a href="/nri-property-management-bengaluru" className="underline underline-offset-2">
+            NRI owner support
+          </a>
           <a href="/legal/privacy" className="underline underline-offset-2">
             Privacy
           </a>

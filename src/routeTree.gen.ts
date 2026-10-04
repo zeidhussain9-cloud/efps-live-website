@@ -9,11 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as NriPropertyManagementBengaluruRouteImport } from './routes/nri-property-management-bengaluru'
 import { Route as CustomerProtectionRouteImport } from './routes/customer-protection'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LegalSlugRouteImport } from './routes/legal.$slug'
 import { Route as GuidesPropertyManagementBengaluruRouteImport } from './routes/guides.property-management-bengaluru'
+import { Route as AreasAreaRouteImport } from './routes/areas.$area'
 
+const NriPropertyManagementBengaluruRoute =
+  NriPropertyManagementBengaluruRouteImport.update({
+    id: '/nri-property-management-bengaluru',
+    path: '/nri-property-management-bengaluru',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CustomerProtectionRoute = CustomerProtectionRouteImport.update({
   id: '/customer-protection',
   path: '/customer-protection',
@@ -35,16 +43,25 @@ const GuidesPropertyManagementBengaluruRoute =
     path: '/guides/property-management-bengaluru',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AreasAreaRoute = AreasAreaRouteImport.update({
+  id: '/areas/$area',
+  path: '/areas/$area',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/customer-protection': typeof CustomerProtectionRoute
+  '/nri-property-management-bengaluru': typeof NriPropertyManagementBengaluruRoute
+  '/areas/$area': typeof AreasAreaRoute
   '/guides/property-management-bengaluru': typeof GuidesPropertyManagementBengaluruRoute
   '/legal/$slug': typeof LegalSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/customer-protection': typeof CustomerProtectionRoute
+  '/nri-property-management-bengaluru': typeof NriPropertyManagementBengaluruRoute
+  '/areas/$area': typeof AreasAreaRoute
   '/guides/property-management-bengaluru': typeof GuidesPropertyManagementBengaluruRoute
   '/legal/$slug': typeof LegalSlugRoute
 }
@@ -52,6 +69,8 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/customer-protection': typeof CustomerProtectionRoute
+  '/nri-property-management-bengaluru': typeof NriPropertyManagementBengaluruRoute
+  '/areas/$area': typeof AreasAreaRoute
   '/guides/property-management-bengaluru': typeof GuidesPropertyManagementBengaluruRoute
   '/legal/$slug': typeof LegalSlugRoute
 }
@@ -60,18 +79,24 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/customer-protection'
+    | '/nri-property-management-bengaluru'
+    | '/areas/$area'
     | '/guides/property-management-bengaluru'
     | '/legal/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/customer-protection'
+    | '/nri-property-management-bengaluru'
+    | '/areas/$area'
     | '/guides/property-management-bengaluru'
     | '/legal/$slug'
   id:
     | '__root__'
     | '/'
     | '/customer-protection'
+    | '/nri-property-management-bengaluru'
+    | '/areas/$area'
     | '/guides/property-management-bengaluru'
     | '/legal/$slug'
   fileRoutesById: FileRoutesById
@@ -79,12 +104,21 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CustomerProtectionRoute: typeof CustomerProtectionRoute
+  NriPropertyManagementBengaluruRoute: typeof NriPropertyManagementBengaluruRoute
+  AreasAreaRoute: typeof AreasAreaRoute
   GuidesPropertyManagementBengaluruRoute: typeof GuidesPropertyManagementBengaluruRoute
   LegalSlugRoute: typeof LegalSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/nri-property-management-bengaluru': {
+      id: '/nri-property-management-bengaluru'
+      path: '/nri-property-management-bengaluru'
+      fullPath: '/nri-property-management-bengaluru'
+      preLoaderRoute: typeof NriPropertyManagementBengaluruRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/customer-protection': {
       id: '/customer-protection'
       path: '/customer-protection'
@@ -113,12 +147,21 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GuidesPropertyManagementBengaluruRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/areas/$area': {
+      id: '/areas/$area'
+      path: '/areas/$area'
+      fullPath: '/areas/$area'
+      preLoaderRoute: typeof AreasAreaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CustomerProtectionRoute: CustomerProtectionRoute,
+  NriPropertyManagementBengaluruRoute: NriPropertyManagementBengaluruRoute,
+  AreasAreaRoute: AreasAreaRoute,
   GuidesPropertyManagementBengaluruRoute:
     GuidesPropertyManagementBengaluruRoute,
   LegalSlugRoute: LegalSlugRoute,
