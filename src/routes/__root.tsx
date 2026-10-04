@@ -77,7 +77,7 @@ function RootComponent() {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/easyfind-logo.webp" type="image/webp" />
-          <link rel="canonical" href="https://easyfindprops.com" />
+          <link rel="canonical" href="https://www.easyfindprops.com" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link

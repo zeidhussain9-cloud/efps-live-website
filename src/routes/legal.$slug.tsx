@@ -131,7 +131,7 @@ function LegalPage() {
       <Helmet>
         <title>{page.title} | EasyFind Property Solutions</title>
         <meta name="description" content={page.intro} />
-        <link rel="canonical" href={`https://easyfindprops.com/legal/${slug}`} />
+        <link rel="canonical" href={`https://www.easyfindprops.com/legal/${slug}`} />
       </Helmet>
       <header className="border-b border-[#e4e8ed] bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-5 md:px-8">

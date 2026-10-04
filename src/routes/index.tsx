@@ -1078,7 +1078,7 @@ function Index() {
   return (
     <div style={{ color: INK, fontFamily: "Inter, sans-serif" }}>
       <Helmet>
-        <title>EasyFind Property Solutions | Your On-Ground Property Partner in Bengaluru</title>
+        <title>EasyFind | Rent, Manage & Care for Property in East Bengaluru</title>
         <meta
           name="description"
           content="EasyFind helps people find homes and helps property owners manage what matters—with a clear point of contact and practical support."

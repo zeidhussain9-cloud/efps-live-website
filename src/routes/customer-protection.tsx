@@ -21,7 +21,7 @@ function CustomerProtection() {
           name="description"
           content="Understand EasyFind's service scope, fees, payment steps, documents, and escalation route before work begins."
         />
-        <link rel="canonical" href="https://easyfindprops.com/customer-protection" />
+        <link rel="canonical" href="https://www.easyfindprops.com/customer-protection" />
       </Helmet>
       <InformationHeader />
       <PageIntro
