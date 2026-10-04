@@ -46,29 +46,29 @@
 - [ ] 44. **Content Density:** Remove filler and unnecessary copy.
 - [ ] 45. **AI-Looking Copy:** Remove artificial phrasing, repetitive structures, and over-polished filler.
 - [ ] 46. **Bengaluru Usage:** Use “Bengaluru” and “local” naturally rather than repeatedly.
-- [ ] 47. **Visual Direction:** Establish the approved minimal, premium, classic visual language consistently.
-- [ ] 48. **Colour System:** Standardize the restrained navy, cream, and gold palette.
-- [ ] 49. **Navy Consistency:** Remove disconnected blues and use one consistent navy.
-- [ ] 50. **Typography:** Establish serif editorial headings with clean sans-serif body typography.
-- [ ] 51. **Spacing:** Increase and standardize whitespace throughout the website.
-- [ ] 52. **Controls:** Standardize rounded buttons, forms, and interactive elements.
-- [ ] 53. **Borders:** Use quiet, restrained borders instead of decorative effects.
+- [x] 47. **Visual Direction:** Establish the approved minimal, premium, classic visual language consistently.
+- [x] 48. **Colour System:** Standardize the restrained navy, cream, and gold palette.
+- [x] 49. **Navy Consistency:** Remove disconnected blues and use one consistent navy.
+- [x] 50. **Typography:** Establish serif editorial headings with clean sans-serif body typography.
+- [x] 51. **Spacing:** Increase and standardize whitespace throughout the website.
+- [x] 52. **Controls:** Standardize rounded buttons, forms, and interactive elements.
+- [x] 53. **Borders:** Use quiet, restrained borders instead of decorative effects.
 - [ ] 54. **Hero Visual:** Remove anything that makes the hero feel flashy, generic, or disconnected.
 - [ ] 55. **Gold Decoration:** Keep the golden treatment restrained and avoid the previous dotted/decorative style.
 - [ ] 56. **Imagery:** Establish a consistent premium treatment for property photography.
 - [ ] 57. **Property Images:** Standardize cropping, aspect ratios, quality, and presentation.
 - [ ] 58. **Branding on Images:** Use the EFPS logo subtly and consistently where appropriate.
-- [ ] 59. **Visual Hierarchy:** Make sections feel editorial and premium rather than template-driven.
-- [ ] 60. **Mobile Design:** Preserve the minimalist hierarchy and readability on mobile.
-- [ ] 61. **Trust Section:** Redesign around authentic proof rather than promotional statistics alone.
-- [ ] 62. **How It Works:** Make the process visually simple and immediately understandable.
-- [ ] 63. **FAQ:** Rewrite FAQs around genuine customer and owner questions.
-- [ ] 64. **Enquiry Section:** Make the final enquiry section decisive and simple.
-- [ ] 65. **Footer:** Ensure service routes, policy links, contact routes, area routes, and legal identity are complete and accurate.
-- [ ] 66. **Legal Identity:** Keep the correct EasyFind Property Solutions identity consistently across the website.
-- [ ] 67. **Navigation:** Simplify navigation around the approved service architecture.
-- [ ] 68. **Internal Linking:** Connect services, guides, NRI content, and area clusters logically.
-- [ ] 69. **Content Consistency:** Remove contradictions between different sections and pages.
+- [x] 59. **Visual Hierarchy:** Make sections feel editorial and premium rather than template-driven.
+- [x] 60. **Mobile Design:** Preserve the minimalist hierarchy and readability on mobile.
+- [x] 61. **Trust Section:** Redesign around authentic proof rather than promotional statistics alone.
+- [x] 62. **How It Works:** Make the process visually simple and immediately understandable.
+- [x] 63. **FAQ:** Rewrite FAQs around genuine customer and owner questions.
+- [x] 64. **Enquiry Section:** Make the final enquiry section decisive and simple.
+- [x] 65. **Footer:** Ensure service routes, policy links, contact routes, area routes, and legal identity are complete and accurate.
+- [x] 66. **Legal Identity:** Keep the correct EasyFind Property Solutions identity consistently across the website.
+- [x] 67. **Navigation:** Simplify navigation around the approved service architecture.
+- [x] 68. **Internal Linking:** Connect services, guides, NRI content, and area clusters logically.
+- [x] 69. **Content Consistency:** Remove contradictions between different sections and pages.
 - [ ] 70. **Final Polish:** Review the entire site for consistency, restraint, clarity, trust, and premium presentation.
 
 
@@ -82,4 +82,4 @@ Pointers 38–46 are now in active development. Homepage FAQ/search-intent wordi
 
 
 Development note — Visual system and site-wide polish
-Pointers 47–70 are now in active development. The shared visual system has been consolidated around one navy/cream/gold palette, editorial typography, restrained borders, consistent controls, stronger homepage hierarchy, improved enquiry form presentation, unified guide/cluster styling, and responsive layout rules. Adobe Express was used for concrete visual exploration and a property-hero concept; the temporary Express design is not yet a repository asset. Final completion remains pending full device review and user approval.
+Pointers 47–53, 59–69 have been implemented on development and reviewed for consistency. The shared visual system is consolidated around one navy/cream/gold palette, editorial typography, restrained borders, consistent controls, stronger hierarchy, improved enquiry presentation, unified guide/cluster styling, responsive rules, and site-wide linking/legal consistency. Pointers 54–58 (hero/imagery/property-image/branding asset work) and 70 (final end-to-end polish) remain open because no final repository imagery asset has been approved or integrated yet.
