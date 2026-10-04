@@ -791,76 +791,24 @@ function Contact() {
                 <li>• Fees and third-party charges are handled case by case.</li>
               </ul>
             </div>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="mt-5">
               <a
                 href={WHATSAPP}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition hover:-translate-y-0.5"
+                className="flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
+                style={{ background: NAVY, color: "white" }}
               >
-                <span
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                  style={{ background: "#e9f7ee", color: "#176b3a" }}
-                >
-                  <MessageCircle size={20} />
-                </span>
-                <span>
-                  <span
-                    className="block text-xs font-semibold uppercase tracking-wider"
-                    style={{ color: MUTED }}
-                  >
-                    WhatsApp
-                  </span>
-                  <span className="mt-1 block font-semibold" style={{ color: NAVY }}>
-                    Start an enquiry
-                  </span>
-                </span>
+                <MessageCircle size={18} /> Start on WhatsApp <ArrowRight size={15} />
               </a>
-              <a
-                href="mailto:info@easyfindprops.com"
-                className="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition hover:-translate-y-0.5"
-              >
-                <span
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                  style={{ background: "#eef3f8", color: NAVY }}
-                >
-                  <Mail size={20} />
-                </span>
-                <span>
-                  <span
-                    className="block text-xs font-semibold uppercase tracking-wider"
-                    style={{ color: MUTED }}
-                  >
-                    Email
-                  </span>
-                  <span className="mt-1 block font-semibold" style={{ color: NAVY }}>
-                    info@easyfindprops.com
-                  </span>
-                </span>
-              </a>
-              <a
-                href={CALL}
-                className="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition hover:-translate-y-0.5"
-                aria-label="Call EasyFind"
-              >
-                <span
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                  style={{ background: "#fbf4df", color: GOLD }}
-                >
-                  <Phone size={20} />
-                </span>
-                <span>
-                  <span
-                    className="block text-xs font-semibold uppercase tracking-wider"
-                    style={{ color: MUTED }}
-                  >
-                    Phone
-                  </span>
-                  <span className="mt-1 block font-semibold" style={{ color: NAVY }}>
-                    Call EasyFind
-                  </span>
-                </span>
-              </a>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <a href={CALL} className="font-semibold underline underline-offset-4" style={{ color: NAVY }}>
+                  Call EasyFind
+                </a>
+                <a href="mailto:info@easyfindprops.com" className="font-semibold underline underline-offset-4" style={{ color: NAVY }}>
+                  Email EasyFind
+                </a>
+              </div>
             </div>
             <div
               className="mt-8 flex items-start gap-4 rounded-xl border bg-white/60 p-5"
