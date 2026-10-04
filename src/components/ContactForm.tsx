@@ -175,6 +175,8 @@ const ContactForm: React.FC<{ onPrivacyClick: () => void }> = ({ onPrivacyClick 
             onChange={(e) => setName(e.target.value)}
             onBlur={(e) => setName(e.target.value.trim())}
             disabled={isSubmitting}
+            required
+            aria-required="true"
             className={inputBase}
             style={{ borderColor: "#E5E7EB" }}
           />
@@ -204,6 +206,8 @@ const ContactForm: React.FC<{ onPrivacyClick: () => void }> = ({ onPrivacyClick 
                 if (val !== phone) setPhone(val);
               }}
               disabled={isSubmitting}
+              required
+              aria-required="true"
               className={inputBase}
               style={{ borderColor: "#E5E7EB" }}
             />
@@ -222,6 +226,8 @@ const ContactForm: React.FC<{ onPrivacyClick: () => void }> = ({ onPrivacyClick 
             value={requirement}
             onChange={(e) => setRequirement(e.target.value)}
             disabled={isSubmitting}
+            required
+            aria-required="true"
             className={inputBase}
             style={{ borderColor: "#E5E7EB" }}
           >
