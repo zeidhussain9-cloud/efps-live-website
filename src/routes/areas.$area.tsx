@@ -144,38 +144,38 @@ const clusters: Record<string, Cluster> = {
     shortName: "HSR–Hosur Road",
     areas: "HSR Layout · Koramangala · Bommanahalli · Kudlu · parts of Hosur Road",
     summary:
-      "An established south-east cluster connecting planned residential sectors, inner Bengaluru destinations and the Hosur Road side.",
+      "A south-east corridor that is better understood as several different residential decisions: HSR's numbered sectors, the ORR edge, Koramangala's inner-city side, and the Hosur Road–Bommanahalli–Kudlu stretch.",
     fit:
-      "A practical starting point for people balancing HSR, Koramangala and south-east Bengaluru work or family routines.",
+      "Useful for renters, buyers and owners who need to decide between HSR's interior sectors, ORR access, Koramangala and the Hosur Road side rather than treating them as one neighbourhood.",
     decision:
-      "HSR is sector-based and highly address-sensitive. Compare the exact sector, road, destination and daily route rather than choosing by locality name.",
+      "We would split this corridor before advising: first choose the side of HSR or Hosur Road that fits the daily destination; then compare the exact sector, road and property.",
     signals: [
-      "HSR Layout's numbered sectors make the exact sector and road important when comparing homes.",
-      "Koramangala provides a different urban pattern from the HSR interior sectors and the Hosur Road edge.",
-      "Bommanahalli and Kudlu extend the decision southward, so the same HSR–Hosur Road label can hide very different daily routes.",
+      "HSR Layout is organised into numbered sectors and main/cross roads; the sector can change the practical relationship to ORR, Sarjapur Road, Hosur Road and local services.",
+      "BBMP road records specifically identify HSR routes such as 5th Main and 9th Main connecting the ORR side towards Yellukunte through Sectors 3 and 2.",
+      "The southward side is not the same decision: Bommanahalli, Hongasandra, Mangammanapalya and Kudlu sit on a different road pattern and should be compared by destination.",
     ],
     pockets: [
       {
-        name: "HSR Layout",
-        detail: "Compare sectors, main-road access and the exact destination. Two properties in HSR can have very different daily routines.",
+        name: "HSR — interior sectors",
+        detail: "Best considered by sector, road and the exact destination. Sector 1, 2, 3, 6 and 7 can create different daily routes and local-service patterns.",
       },
       {
-        name: "Koramangala",
-        detail: "A useful option when inner-city access and established services matter more than a southward commute.",
+        name: "HSR — ORR / Agara side",
+        detail: "A natural fit for some ORR-oriented routines. Check the actual approach road and the destination rather than assuming every HSR address has the same access.",
       },
       {
-        name: "Bommanahalli",
-        detail: "A south-side connection point worth comparing when Hosur Road access is important.",
+        name: "Koramangala edge",
+        detail: "A more inner-city choice, with a different balance of access and neighbourhood character from HSR's southern and outer edges.",
       },
       {
-        name: "Kudlu / Hosur Road side",
-        detail: "A different proposition from inner HSR. Check the actual work route and last-mile connection.",
+        name: "Hosur Road — Bommanahalli / Hongasandra / Kudlu",
+        detail: "A distinct south-east route. Compare the actual workplace, road connection and last-mile travel before choosing a home here.",
       },
     ],
     questions: [
-      "Which HSR sector or side of Hosur Road is actually convenient for you?",
-      "Is your priority inner-city access, south-side travel, or a particular workplace?",
-      "For an owner, does the property need tenant support, inspections, repairs or vacancy readiness?",
+      "Which side of HSR or Hosur Road fits the actual daily destination?",
+      "Would an interior HSR sector, ORR edge, Koramangala side or south-east route make the bigger difference to your routine?",
+      "For an owner, does the property need tenant support, inspections, repairs, access or vacancy readiness?",
     ],
   },
 };
