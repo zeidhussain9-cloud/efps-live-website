@@ -111,15 +111,19 @@ function pageHead(page: (typeof staticPages)[number]) {
 }
 
 function renderStaticHead(html: string, page: (typeof staticPages)[number]) {
+  const isIndexable = process.env.VITE_SITE_INDEXABLE !== "false";
   const withoutRouteTags = html
     .replace(/<title>.*?<\/title>/s, "")
     .replace(/<meta name="description"[^>]*>/g, "")
     .replace(/<link rel="canonical"[^>]*>/g, "")
     .replace(/<meta property="og:[^>]*>/g, "")
     .replace(/<meta name="twitter:[^>]*>/g, "");
+  const robotsTag = isIndexable
+    ? ""
+    : '<meta name="robots" content="noindex,nofollow,noarchive">';
   return withoutRouteTags.replace(
     "</head>",
-    `<title>${escapeHtml(page.title)}</title>${pageHead(page)}</head>`,
+    `<title>${escapeHtml(page.title)}</title>${robotsTag}${pageHead(page)}</head>`,
   );
 }
 
@@ -133,9 +137,12 @@ function staticSpaRoutes() {
         mkdirSync(routeDir, { recursive: true });
         writeFileSync(join(routeDir, "index.html"), renderStaticHead(baseHtml, page));
       }
+      const isIndexable = process.env.VITE_SITE_INDEXABLE !== "false";
       writeFileSync(
         join("dist", "robots.txt"),
-        "User-agent: *\nAllow: /\nSitemap: https://www.easyfindprops.com/sitemap.xml\n",
+        isIndexable
+          ? "User-agent: *\nAllow: /\nSitemap: https://www.easyfindprops.com/sitemap.xml\n"
+          : "User-agent: *\nDisallow: /\n",
       );
       writeFileSync(
         join("dist", "sitemap.xml"),
