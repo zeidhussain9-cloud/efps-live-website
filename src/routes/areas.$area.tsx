@@ -208,7 +208,7 @@ function ClusterPage() {
   const cluster = clusters[area] ?? clusters["sarjapur-road-cluster"];
 
   return (
-    <div className="min-h-screen bg-[#f7f5ef] text-[#223044]">
+    <div className="ef-page">
       <Helmet>
         <title>{cluster.name} Property Guide | EasyFind</title>
         <meta
@@ -223,7 +223,7 @@ function ClusterPage() {
 
       <InformationHeader />
 
-      <section className="overflow-hidden bg-[#23435f] px-4 py-12 text-white sm:px-5 md:px-8 md:py-20">
+      <section className="relative overflow-hidden bg-brand-navy px-4 py-12 text-white sm:px-5 md:px-8 md:py-20"><div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#19364f]/50 to-transparent" aria-hidden="true"/>
         <div className="mx-auto max-w-6xl">
           <div className="grid min-w-0 gap-8 xl:grid-cols-[1.15fr_.85fr] xl:items-stretch">
             <div>
@@ -258,7 +258,7 @@ function ClusterPage() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-6xl px-4 py-12 sm:px-5 md:px-8 md:py-16">
+      <main className="ef-container py-12 md:py-16">
         <div className="grid min-w-0 gap-10 xl:grid-cols-[1.08fr_.92fr] xl:items-start">
           <article className="min-w-0 space-y-10 sm:space-y-12">
             <section>
@@ -271,7 +271,7 @@ function ClusterPage() {
               <p className="mt-5 max-w-3xl leading-relaxed text-[#667384]">{cluster.fit}</p>
             </section>
 
-            <section className="rounded-2xl border border-[#e4e8ed] bg-[#fffdfa] p-6 sm:p-8 md:p-10">
+            <section className="ef-panel-soft p-6 sm:p-8 md:p-10">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                   Local reading
@@ -286,7 +286,7 @@ function ClusterPage() {
 
               <div className="mt-8 grid gap-4 lg:grid-cols-3">
                 {cluster.localReading.map((item, index) => (
-                  <div key={item.title} className="rounded-xl border border-[#e4e8ed] bg-[#f8f7f2] p-5 sm:p-6">
+                  <div key={item.title} className="rounded-xl border border-brand-border bg-[#faf9f5] p-5 sm:p-6">
                     <div className="flex items-center gap-3">
                       <span className="font-serif text-xl text-[#b89445]">
                         {String(index + 1).padStart(2, "0")}
@@ -302,7 +302,7 @@ function ClusterPage() {
             <section>
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {cluster.signals.map((signal, index) => (
-                  <div key={signal} className="rounded-2xl border border-[#e4e8ed] bg-white p-6">
+                  <div key={signal} className="ef-panel-soft p-6">
                     <span className="font-serif text-2xl text-[#b89445]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
@@ -336,7 +336,7 @@ function ClusterPage() {
               </div>
             </section>
 
-            <section className="rounded-2xl bg-[#eef2f2] p-6 md:p-8">
+            <section className="rounded-2xl border border-brand-border bg-[#eef2f2] p-6 md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                 Before you decide
               </p>
