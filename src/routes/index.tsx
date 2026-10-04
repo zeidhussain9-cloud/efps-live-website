@@ -533,56 +533,65 @@ function Services() {
 function Areas() {
   const clusters = [
     [
-      "Bellandur–Marathahalli Cluster",
-      "Bellandur · Kadubeesanahalli · Panathur · Yemalur · Marathahalli · Varthur-side pockets",
+      "01",
+      "Bellandur–Marathahalli",
+      "ORR work belt · Bellandur · Kadubeesanahalli · Panathur · Marathahalli",
+      "For people balancing office access, residential choice and day-to-day east Bengaluru movement.",
       "/areas/bellandur-marathahalli-cluster",
     ],
     [
-      "Sarjapur Road Cluster",
-      "Sarjapur Road · Harlur · Kasavanahalli · Kaikondrahalli · Gunjur-side pockets",
+      "02",
+      "Sarjapur Road",
+      "Harlur · Kasavanahalli · Kaikondrahalli · Gunjur-side pockets",
+      "For searches where the exact road matters as much as the locality name.",
       "/areas/sarjapur-road-cluster",
     ],
     [
-      "Whitefield–Mahadevapura Cluster",
-      "Whitefield · Hoodi · ITPL · Mahadevapura · surrounding pockets",
+      "03",
+      "Whitefield–Mahadevapura",
+      "Whitefield · Hoodi · ITPL · Mahadevapura",
+      "For technology-corridor homes and owners who need practical support around a property.",
       "/areas/whitefield-mahadevapura-cluster",
     ],
     [
-      "HSR–Hosur Road Cluster",
-      "HSR Layout · Koramangala · Bommanahalli · Kudlu · parts of Hosur Road",
+      "04",
+      "HSR–Hosur Road",
+      "HSR Layout · Koramangala · Bommanahalli · Kudlu",
+      "For south-east Bengaluru decisions shaped by sector, road and the actual destination.",
       "/areas/hsr-hosur-road-cluster",
     ],
   ];
   return (
     <section id="areas" className="py-20 md:py-28" style={{ background: NAVY }}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <div className="grid items-start gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
+        <div className="grid items-start gap-12 md:grid-cols-[0.72fr_1.28fr] md:gap-16">
           <div>
             <Eyebrow light>Where we work</Eyebrow>
-            <SectionTitle light>Areas, understood in context.</SectionTitle>
+            <SectionTitle light>Four corridors. Four different property decisions.</SectionTitle>
             <p className="mt-5 leading-relaxed text-white/70">
-              EasyFind works across key residential and employment corridors. Tell us your preferred
-              area, property need, and timeline—we’ll help you understand the right next step.
+              East Bengaluru is not one market. We organise our area coverage around the residential
+              and employment corridors people actually use when choosing a home or managing a property.
             </p>
             <p className="mt-6 border-l border-[#b89445] pl-4 text-sm leading-relaxed text-white/60">
-              Coverage is focused on confirmed areas where commute, access, and property needs can
-              be discussed with useful context.
+              Open a cluster guide for the local context, then bring us the exact address or requirement.
             </p>
           </div>
-          <div className="grid gap-4">
-            {clusters.map(([title, areas, href]) => (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {clusters.map(([number, title, areas, text, href]) => (
               <a
                 key={href}
                 href={href}
-                className="group border border-white/15 bg-white/5 p-6 transition hover:-translate-y-0.5 hover:bg-white/10 md:p-7"
+                className="group rounded-2xl border border-white/15 bg-white/[0.06] p-6 transition hover:-translate-y-1 hover:bg-white/[0.10] md:p-7"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="font-serif text-xl text-white">{title}</h3>
-                  <ArrowRight className="mt-1 shrink-0 text-[#e3c976]" size={18} />
+                  <span className="font-serif text-2xl text-[#e3c976]">{number}</span>
+                  <ArrowRight className="mt-1 shrink-0 text-[#e3c976] transition group-hover:translate-x-1" size={18} />
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-white/65">{areas}</p>
-                <span className="mt-4 inline-flex text-sm font-semibold text-white underline underline-offset-4">
-                  Open cluster guide
+                <h3 className="mt-6 font-serif text-2xl text-white">{title}</h3>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-white/45">{areas}</p>
+                <p className="mt-4 text-sm leading-relaxed text-white/65">{text}</p>
+                <span className="mt-5 inline-flex text-sm font-semibold text-white underline underline-offset-4">
+                  Explore the local guide
                 </span>
               </a>
             ))}
