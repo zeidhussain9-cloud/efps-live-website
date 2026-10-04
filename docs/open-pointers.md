@@ -72,6 +72,6 @@
 - [ ] 70. **Final Polish:** Review the entire site for consistency, restraint, clarity, trust, and premium presentation.
 
 
-## Completion note — Pointers 1–24
 
-Completed on the development branch. The homepage now uses the approved four customer journeys as the primary hero decision structure, avoids generic brokerage/unsupported promotional claims, and uses practical proof instead of invented statistics. The process now covers enquiry, scope agreement, coordination, and closure, with the one-business-day acknowledgement target stated. Fees remain case by case, owner updates are explicit, and Google reviews are linked to the public source rather than a hard-coded rating or review count. Legal identity, policies, contact routes, and the public Google profile remain discoverable.
+## Development note — Local cluster redesign
+Pointers 25–37 are in active development. The four cluster pages have been rebuilt around local property decisions, pocket-level context, practical destination/road checks, and direct EasyFind enquiry routes. Generic external-reference lists were removed from the cluster-page presentation. The NRI and owner guides now link into the same four-cluster architecture. Final pointer completion remains pending development review and user approval.
