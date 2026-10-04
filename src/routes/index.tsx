@@ -601,7 +601,8 @@ function Reviews() {
           <div>
             <SectionTitle>Read what customers have shared.</SectionTitle>
             <p className="mt-4 max-w-2xl leading-relaxed" style={{ color: MUTED }}>
-              Customer reviews are kept on the public Google Business Profile so the source, current rating, and review count remain visible and verifiable.
+              We do not reproduce a fixed rating or review count here. The public Google Business
+              Profile is the source for the current rating, review count, and customer feedback.
             </p>
           </div>
           <a
@@ -627,7 +628,7 @@ function WhyEasyFind() {
     ],
     [
       "On-the-ground coordination",
-      "We agree the scope, coordinate the next action, and share updates as agreed.",
+      "We coordinate agreed visits, inspections, maintenance follow-up, access, readiness, and other practical actions.",
     ],
     ["Clear service routes", "Find, rent out, manage, or prepare and care for a property."],
   ];
@@ -668,39 +669,54 @@ function WhyEasyFind() {
 }
 
 function HowItWorks() {
+  const steps = [
+    [
+      "01",
+      "Share the situation",
+      "Tell us what you are looking for, what the property needs, and what timing matters.",
+    ],
+    [
+      "02",
+      "Agree the scope",
+      "We clarify responsibilities, approvals, update expectations, and any third-party work before it starts.",
+    ],
+    [
+      "03",
+      "Coordinate the agreed action",
+      "EasyFind follows up with the relevant people or professionals and keeps the next decision visible.",
+    ],
+    [
+      "04",
+      "Close the loop",
+      "You receive the agreed update, outcome, or next action. Enquiries are acknowledged within one business day as our target.",
+    ],
+  ];
+
   return (
     <section id="how-it-works" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <div className="text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>How it works</Eyebrow>
-          <SectionTitle>Clear from the first conversation.</SectionTitle>
+          <SectionTitle>From enquiry to a clear next action.</SectionTitle>
+          <p className="mt-5 leading-relaxed" style={{ color: MUTED }}>
+            The exact work varies by requirement. The way we start stays consistent: understand the
+            situation, agree what is in scope, coordinate the agreed action, and report back.
+          </p>
         </div>
-        <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-3">
-          {[
-            [
-              "01",
-              "Share the situation",
-              "Tell us what you’re looking for or what your property needs.",
-            ],
-            [
-              "02",
-              "Agree the direction",
-              "We clarify the requirement, scope, and responsibilities.",
-            ],
-            [
-              "03",
-              "Coordinate the next step",
-              "EasyFind keeps the agreed action moving and the follow-up clear.",
-            ],
-          ].map(([n, t, b]) => (
-            <div key={n} className="text-center">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map(([n, t, b]) => (
+            <div
+              key={n}
+              className="rounded-2xl border bg-white p-6"
+              style={{ borderColor: "#e4e8ed" }}
+            >
               <div
-                className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 font-serif text-xl"
+                className="flex h-11 w-11 items-center justify-center rounded-full border-2 font-serif text-lg"
                 style={{ borderColor: GOLD, color: GOLD }}
               >
                 {n}
               </div>
-              <h3 className="mt-5 text-lg font-semibold" style={{ color: NAVY }}>
+              <h3 className="mt-5 text-base font-semibold" style={{ color: NAVY }}>
                 {t}
               </h3>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: MUTED }}>
@@ -708,6 +724,13 @@ function HowItWorks() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mx-auto mt-8 max-w-3xl rounded-xl border bg-[#f7f5ef] p-5 text-center" style={{ borderColor: "#e4e8ed" }}>
+          <p className="text-sm leading-relaxed" style={{ color: INK }}>
+            <strong style={{ color: NAVY }}>Fees are case by case.</strong> Any EasyFind fee and
+            relevant third-party or vendor charges are agreed with you according to the requirement
+            and scope.
+          </p>
         </div>
       </div>
     </section>
@@ -787,7 +810,17 @@ function Contact() {
               Share the basics and we’ll help you identify the right next step. No listings
               catalogue—just a practical conversation about your requirement.
             </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="mt-8 rounded-xl border bg-white/70 p-5" style={{ borderColor: "#e4e8ed" }}>
+              <p className="text-xs font-semibold uppercase tracking-[.2em]" style={{ color: GOLD }}>
+                What to expect
+              </p>
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed" style={{ color: INK }}>
+                <li>• We aim to acknowledge enquiries within one business day.</li>
+                <li>• Scope, responsibilities, and update expectations are agreed before work begins.</li>
+                <li>• Fees and third-party charges are handled case by case.</li>
+              </ul>
+            </div>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               <a
                 href={WHATSAPP}
                 target="_blank"
