@@ -80,7 +80,7 @@ const pages = {
       ],
       [
         "History",
-        "EasyFind has served customers in East Bengaluru for about 5 years. The business was incorporated as EASYFIND REALTY SOLUTIONS PRIVATE LIMITED in April 2026.",
+        "EasyFind has served customers in East Bengaluru for about 3 years. The business was incorporated as EASYFIND REALTY SOLUTIONS PRIVATE LIMITED on 23 April 2026.",
       ],
       [
         "Nature of information",
