@@ -250,24 +250,35 @@ function PropertyManagementGuide() {
 
             <GuideSection number="04" title="Where we currently work in Bengaluru">
               <p>
-                EasyFind currently works across the areas below. Address-level coverage, access,
-                timing, and the exact work still need to be confirmed before you rely on support.
+                EasyFind organises its current East Bengaluru coverage into four practical clusters.
+                Use the cluster guides for local context, then confirm the exact address and scope.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {areas.map((area) => (
-                  <span
-                    key={area}
-                    className="rounded-full bg-[#e9eff1] px-3 py-1.5 text-sm font-medium text-[#446274]"
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {[
+                  ["Sarjapur Road", "/areas/sarjapur-road-cluster", "Harlur · Kasavanahalli · Kaikondrahalli · Gunjur-side pockets"],
+                  ["Bellandur–Marathahalli", "/areas/bellandur-marathahalli-cluster", "Bellandur · Kadubeesanahalli · Panathur · Yemalur · Marathahalli"],
+                  ["Whitefield–Mahadevapura", "/areas/whitefield-mahadevapura-cluster", "Whitefield · Hoodi · ITPL · Mahadevapura"],
+                  ["HSR–Hosur Road", "/areas/hsr-hosur-road-cluster", "HSR Layout · Koramangala · Bommanahalli · Kudlu"],
+                ].map(([name, href, detail]) => (
+                  <a
+                    key={href}
+                    href={href}
+                    className="rounded-xl border border-[#e4e8ed] bg-white p-5 transition hover:-translate-y-0.5"
                   >
-                    {area}
-                  </span>
+                    <p className="font-serif text-xl font-semibold text-[#23435f]">{name}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#667384]">{detail}</p>
+                    <span className="mt-3 block text-sm font-semibold text-[#23435f] underline underline-offset-4">
+                      Open cluster guide
+                    </span>
+                  </a>
                 ))}
               </div>
               <div className="mt-6 flex gap-3 rounded-xl border border-[#e4e8ed] bg-[#fbfaf6] p-4 text-sm leading-relaxed text-[#667384]">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-[#b89445]" />
                 <span>
-                  Tell us the address and the situation first. We will confirm whether it fits the
-                  current working scope.
+                  Current areas also include Varthur, Panathur, Yemalur, Harlur, Kasavanahalli,
+                  Koramangala, Kudlu Gate and nearby pockets. Tell us the address and situation first;
+                  we will confirm whether it fits the current working scope.
                 </span>
               </div>
             </GuideSection>
