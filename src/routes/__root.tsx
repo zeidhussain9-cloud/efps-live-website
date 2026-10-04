@@ -79,7 +79,7 @@ function RootComponent() {
           <title>EasyFind Property Solutions | Your On-Ground Property Partner in Bengaluru</title>
           <meta
             name="description"
-            content="EasyFind helps people find homes in Bengaluru and helps property owners manage what matters—with local, clear, practical support."
+            content="EasyFind helps people find homes and helps property owners manage what matters—with clear, practical support."
           />
           <meta name="author" content="EasyFind Property Solutions" />
           <meta
@@ -88,7 +88,7 @@ function RootComponent() {
           />
           <meta
             property="og:description"
-            content="EasyFind helps people find homes in Bengaluru and helps property owners manage what matters—with local, clear, practical support."
+            content="EasyFind helps people find homes and helps property owners manage what matters—with clear, practical support."
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://easyfindprops.com" />
@@ -102,7 +102,7 @@ function RootComponent() {
           />
           <meta
             name="twitter:description"
-            content="EasyFind helps people find homes in Bengaluru and helps property owners manage what matters—with local, clear, practical support."
+            content="EasyFind helps people find homes and helps property owners manage what matters—with clear, practical support."
           />
           <meta name="twitter:image" content="https://easyfindprops.com/og-image.jpg" />
 

@@ -50,7 +50,7 @@ export function InformationFooter() {
           <a href="/legal/terms" className="underline underline-offset-2">
             Terms
           </a>
-          <a href="/legal-notice" className="underline underline-offset-2">
+          <a href="/legal/legal-notice" className="underline underline-offset-2">
             Legal notice
           </a>
           <a href="/" className="underline underline-offset-2">

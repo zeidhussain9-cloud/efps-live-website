@@ -16,7 +16,7 @@ const serviceGuidance: Record<
   }
 > = {
   "Find a property": {
-    areaLabel: "Preferred Bengaluru area",
+    areaLabel: "Preferred area",
     areaPlaceholder: "Area or neighbourhood",
     propertyLabel: "Budget and property preferences",
     propertyPlaceholder: "Budget, property type, bedrooms...",
@@ -40,7 +40,7 @@ const serviceGuidance: Record<
     propertyPlaceholder: "Property type, occupancy, current status...",
     detailsLabel: "Management support needed",
     detailsPlaceholder: "Tell us what needs coordinating and how we can help",
-    helper: "Share the location and the local coordination you need.",
+    helper: "Share the location and the coordination you need.",
   },
   "Prepare and care for my property": {
     areaLabel: "Property location",
@@ -238,7 +238,7 @@ const ContactForm: React.FC<{ onPrivacyClick: () => void }> = ({ onPrivacyClick 
             htmlFor="hero-location"
             className="mb-1.5 block text-xs font-semibold text-gray-600"
           >
-            {guidance?.areaLabel ?? "Preferred Bengaluru area"}
+            {guidance?.areaLabel ?? "Preferred area"}
           </label>
           <input
             id="hero-location"

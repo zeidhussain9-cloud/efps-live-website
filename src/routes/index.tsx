@@ -30,12 +30,12 @@ const routes = [
   {
     number: "01",
     title: "Find a property",
-    text: "Looking to rent or purchase? Tell us your area, budget, preferences, and timeline so we can help you take the next step with Bengaluru context.",
+    text: "Looking to rent or purchase? Tell us your area, budget, preferences, and timeline so we can help you decide the next practical step.",
     id: "find-a-property",
     eyebrow: "For people looking to rent or purchase",
-    heading: "A clearer way to find the right Bengaluru property.",
+    heading: "A clearer way to find the right property.",
     detail:
-      "Whether you are looking to rent or buy, share the area you have in mind, your budget, property preferences, and timeline. We help you frame the requirement properly, understand the Bengaluru context, and decide on the next practical step.",
+      "Whether you are looking to rent or buy, share the area you have in mind, your budget, property preferences, and timeline. We help you frame the requirement properly and decide on the next practical step.",
     points: [
       "Rental or purchase requirement",
       "Area, commute, and budget context",
@@ -47,7 +47,7 @@ const routes = [
   {
     number: "02",
     title: "Rent out or sell my property",
-    text: "Coordinate enquiries, visits, documentation-related steps, and the next stage for your Bengaluru property.",
+    text: "Coordinate enquiries, visits, documentation-related steps, and the next stage for your property.",
     id: "rent-out-my-property",
     eyebrow: "For owners ready to rent or sell",
     heading: "A more considered route to rent out or sell.",
@@ -64,12 +64,12 @@ const routes = [
   {
     number: "03",
     title: "Manage my property",
-    text: "A dependable Bengaluru point of coordination for owners here, elsewhere in India, or abroad—with agreed updates.",
+    text: "A dependable point of coordination for owners here, elsewhere in India, or abroad—with agreed updates.",
     id: "manage-my-property",
-    eyebrow: "For owners in Bengaluru, India, and abroad",
-    heading: "A Bengaluru-based property partner for owners near and far.",
+    eyebrow: "For owners in India and abroad",
+    heading: "A property partner for owners near and far.",
     detail:
-      "Whether you live in Bengaluru, elsewhere in India, or abroad, we help coordinate the day-to-day property actions that are difficult to handle from a distance. That can include tenant or occupant coordination, inspections, maintenance follow-up, vacancy readiness, and agreed updates.",
+      "Whether you live nearby, elsewhere in India, or abroad, we help coordinate the day-to-day property actions that are difficult to handle from a distance. That can include tenant or occupant coordination, inspections, maintenance follow-up, vacancy readiness, and agreed updates.",
     points: [
       "Tenant, occupant, inspection, and access coordination",
       "Maintenance and issue follow-up with suitable professionals",
@@ -77,7 +77,7 @@ const routes = [
     ],
     subsections: [
       {
-        title: "For owners in Bengaluru and elsewhere in India",
+        title: "For owners nearby and elsewhere in India",
         text: "Stay close to the property without having to chase every day-to-day detail.",
         points: [
           "Tenant or occupant coordination, visits, and inspections",
@@ -87,7 +87,7 @@ const routes = [
       },
       {
         title: "For NRI owners and owners living abroad",
-        text: "A dependable Bengaluru point of contact across distance and time zones.",
+        text: "A dependable point of contact across distance and time zones.",
         points: [
           "On-the-ground checks, access, repairs, and urgent issue coordination",
           "Photo and update-led visibility before and after agreed work",
@@ -287,8 +287,8 @@ function Hero() {
             <span style={{ color: "#e3c976" }}>Property Partner</span>
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/75 lg:mx-0">
-            We help people find homes in Bengaluru and help property owners manage what matters—with
-            a clear point of contact and practical support.
+            We help people find homes and help property owners manage what matters—with a clear
+            point of contact and practical support.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
             <button
@@ -488,12 +488,11 @@ function Areas() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid items-start gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
           <div>
-            <Eyebrow light>Local where it matters</Eyebrow>
-            <SectionTitle light>Bengaluru areas, understood in context.</SectionTitle>
+            <Eyebrow light>Where we work</Eyebrow>
+            <SectionTitle light>Areas, understood in context.</SectionTitle>
             <p className="mt-5 leading-relaxed text-white/70">
-              EasyFind works across key residential and employment corridors in Bengaluru. Tell us
-              your preferred area, property need, and timeline—we’ll help you understand the right
-              next step.
+              EasyFind works across key residential and employment corridors. Tell us your preferred
+              area, property need, and timeline—we’ll help you understand the right next step.
             </p>
             <p className="mt-6 border-l border-[#b89445] pl-4 text-sm leading-relaxed text-white/60">
               Coverage is focused on confirmed areas where commute, access, and property needs can
@@ -514,7 +513,7 @@ function Areas() {
               </p>
             </div>
             <div className="border border-white/15 bg-white/5 p-6 md:p-7">
-              <h3 className="font-serif text-xl text-white">Connected Bengaluru</h3>
+              <h3 className="font-serif text-xl text-white">Connected areas</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65">
                 Mahadevapura · Panathur · Koramangala
               </p>
@@ -575,10 +574,7 @@ function WhyEasyFind() {
       "On-the-ground coordination",
       "We agree the scope, coordinate the next action, and share updates as agreed.",
     ],
-    [
-      "Clear service routes",
-      "Find, rent out, manage, or prepare and care for a Bengaluru property.",
-    ],
+    ["Clear service routes", "Find, rent out, manage, or prepare and care for a property."],
   ];
   return (
     <section
@@ -670,7 +666,7 @@ function FAQ() {
       "No. We keep the website enquiry-led. Share your area, budget, preferences, or property need and we will guide the next conversation.",
     ],
     [
-      "Can owners who live away get property support from Bengaluru?",
+      "Can owners who live away get property support?",
       "Yes, where the requirement and responsibilities are agreed in advance. We coordinate the next action and share agreed updates.",
     ],
     [
@@ -682,8 +678,8 @@ function FAQ() {
       "Fees and any third-party or vendor charges are agreed case by case according to the requirement and scope. We do not publish a universal price list.",
     ],
     [
-      "Which Bengaluru areas do you cover?",
-      "We focus on confirmed areas across Bengaluru’s South-East and employment corridors. See the Areas section for the current coverage.",
+      "Which areas do you cover?",
+      "We focus on confirmed areas across the South-East and employment corridors. See the Areas section for the current coverage.",
     ],
   ];
   return (
@@ -731,7 +727,7 @@ function Contact() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
           <div>
             <Eyebrow>Start a conversation</Eyebrow>
-            <SectionTitle>Tell us what you need from Bengaluru property.</SectionTitle>
+            <SectionTitle>Tell us what you need.</SectionTitle>
             <p className="mt-5 max-w-xl leading-relaxed" style={{ color: MUTED }}>
               Share the basics and we’ll help you identify the right next step. No listings
               catalogue—just a practical conversation about your requirement.
@@ -848,10 +844,10 @@ function Contact() {
           >
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider" style={{ color: GOLD }}>
-                Our Bengaluru presence
+                Our presence
               </p>
               <h3 className="mt-1 font-serif text-2xl font-semibold" style={{ color: NAVY }}>
-                Find us in Bengaluru
+                Find us
               </h3>
             </div>
             <a
@@ -928,7 +924,7 @@ function Footer() {
               Property support
             </p>
             <p className="mt-3 text-sm leading-7" style={{ color: MUTED }}>
-              Practical property support across confirmed Bengaluru areas.{" "}
+              Practical property support across confirmed areas.{" "}
               <a
                 href="#areas"
                 className="font-semibold underline underline-offset-2"
@@ -1016,7 +1012,7 @@ function Index() {
         <title>EasyFind Property Solutions | Your On-Ground Property Partner in Bengaluru</title>
         <meta
           name="description"
-          content="EasyFind helps people find homes in Bengaluru and helps property owners manage what matters—with a clear point of contact and practical support."
+          content="EasyFind helps people find homes and helps property owners manage what matters—with a clear point of contact and practical support."
         />
         <link rel="canonical" href="https://easyfindprops.com" />
       </Helmet>

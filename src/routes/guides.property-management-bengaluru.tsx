@@ -39,7 +39,7 @@ function PropertyManagementGuide() {
         <title>Property Management in Bengaluru: A Practical Owner&apos;s Guide | EasyFind</title>
         <meta
           name="description"
-          content="What property owners actually need from local support in Bengaluru: agreed work, access, repairs, handover, proof, and clear updates when you are away."
+          content="What property owners actually need from a property-support provider: agreed work, access, repairs, handover, proof, and clear updates when you are away."
         />
         <link
           rel="canonical"
@@ -52,13 +52,13 @@ function PropertyManagementGuide() {
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
-              Bengaluru property guide · 8 min read
+              Property guide · 8 min read
             </p>
             <h1 className="mt-5 max-w-3xl font-serif text-4xl font-semibold leading-[1.04] md:text-6xl">
-              Before you hand over your Bengaluru property: a practical owner&apos;s guide.
+              Before you hand over your property: a practical owner&apos;s guide.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#e2eaee] md:text-lg">
-              A practical guide for owners who need someone local to coordinate access, tenants,
+              A practical guide for owners who need someone nearby to coordinate access, tenants,
               repairs, and handover, especially when they live elsewhere.
             </p>
             <a
@@ -101,7 +101,7 @@ function PropertyManagementGuide() {
         <div className="grid gap-12 lg:grid-cols-[1.08fr_.92fr] lg:items-start">
           <article className="space-y-16">
             <section className="grid gap-4 border-y border-[#dfe4e7] py-5 text-sm sm:grid-cols-3">
-              <QuickFact label="This guide is for" text="Bengaluru, India-based, and NRI owners" />
+              <QuickFact label="This guide is for" text="India-based and NRI owners" />
               <QuickFact label="It covers" text="Access, people, repairs, handover, and updates" />
               <QuickFact label="If you need help" text="Discuss your property with EasyFind" />
             </section>
@@ -132,12 +132,12 @@ function PropertyManagementGuide() {
                     What EasyFind can coordinate
                   </p>
                   <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-[#23435f]">
-                    A written brief, local follow-up, and an owner update.
+                    A written brief, on-the-ground follow-up, and an owner update.
                   </h2>
                   <p className="mt-4 leading-relaxed text-[#667384]">
                     EasyFind Property Solutions helps owners define the property need, coordinate
-                    the agreed local work, and receive a clear update. We do not take over every
-                    decision. We make the responsibility, approval point, and next action visible.
+                    the agreed work, and receive a clear update. We do not take over every decision.
+                    We make the responsibility, approval point, and next action visible.
                   </p>
                 </div>
               </div>
@@ -160,10 +160,7 @@ function PropertyManagementGuide() {
               </div>
             </section>
 
-            <GuideSection
-              number="01"
-              title="What should a Bengaluru property-management brief include?"
-            >
+            <GuideSection number="01" title="What should a property-management brief include?">
               <p>
                 Start with the work that is real and repeatable. Use these headings to write the
                 brief for one property; do not assume that every provider includes all of them.
@@ -218,7 +215,7 @@ function PropertyManagementGuide() {
 
             <GuideSection
               number="03"
-              title="Owners outside Bengaluru: agree the update and approval rules first"
+              title="Owners living away: agree the update and approval rules first"
             >
               <p>
                 Before work starts, decide what can move without asking you, what needs approval,
@@ -280,16 +277,16 @@ function PropertyManagementGuide() {
               title="What EasyFind can take on, and what stays with the owner"
             >
               <p>
-                EasyFind can discuss a practical brief and agreed local coordination. The owner
-                still approves the decisions reserved for them, and no provider can guarantee an
-                outcome outside its control.
+                EasyFind can discuss a practical brief and agreed on-the-ground coordination. The
+                owner still approves the decisions reserved for them, and no provider can guarantee
+                an outcome outside its control.
               </p>
               <div className="mt-7 grid gap-4 md:grid-cols-2">
                 <BoundaryCard
                   title="Within an agreed brief"
                   good
                   items={[
-                    "Local coordination and owner updates",
+                    "Area coordination and owner updates",
                     "Access, inspection, repair follow-up, and handover steps",
                     "Working with external vendors and sharing the next decision",
                   ]}
