@@ -142,7 +142,7 @@ function SectionTitle({ children, light = false }: { children: ReactNode; light?
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-brand-navy pt-20 sm:pt-24 lg:pt-28">
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true"><img src="/og-image.jpg" alt="" className="absolute inset-y-0 right-0 hidden h-full w-[52%] object-cover opacity-[0.16] lg:block" /><div className="absolute inset-y-0 right-0 hidden w-[58%] bg-gradient-to-l from-brand-navy/20 via-brand-navy/75 to-brand-navy lg:block" />
         <div className="absolute right-[-10%] top-12 h-[32rem] w-[32rem] rounded-full border border-white/10" />
         <div className="absolute right-[5%] top-28 h-[23rem] w-[23rem] rounded-full border border-[#d8bd73]/15" />
         <div className="absolute inset-y-0 left-0 w-[44%] bg-gradient-to-r from-[#19364f]/55 to-transparent" />
