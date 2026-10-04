@@ -75,3 +75,7 @@
 
 ## Development note — Local cluster redesign
 Pointers 25–37 are in active development. The four cluster pages have been rebuilt around local property decisions, pocket-level context, practical destination/road checks, and direct EasyFind enquiry routes. Generic external-reference lists were removed from the cluster-page presentation. The NRI and owner guides now link into the same four-cluster architecture. Final pointer completion remains pending development review and user approval.
+
+
+Development note — Intent, CTA and content refinement
+Pointers 38–46 are now in active development. Homepage FAQ/search-intent wording, enquiry hierarchy, repeated process copy, and generic East Bengaluru phrasing have been tightened. Final completion remains pending visual review and user approval.
