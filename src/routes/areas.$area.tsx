@@ -202,9 +202,9 @@ function ClusterPage() {
 
       <InformationHeader />
 
-      <section className="overflow-hidden bg-[#23435f] px-5 py-14 text-white md:px-8 md:py-24">
+      <section className="overflow-hidden bg-[#23435f] px-4 py-12 text-white sm:px-5 md:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
+          <div className="grid min-w-0 gap-8 xl:grid-cols-[1.15fr_.85fr] xl:items-end">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
                 East Bengaluru · local property guide
@@ -212,14 +212,14 @@ function ClusterPage() {
               <h1 className="mt-4 max-w-4xl font-serif text-4xl font-semibold leading-[1.04] md:text-6xl">
                 {cluster.name}
               </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[#e2eaee]">
+              <p className="mt-5 max-w-3xl text-base leading-relaxed text-[#e2eaee] sm:text-lg">
                 {cluster.summary}
               </p>
               <p className="mt-7 max-w-3xl border-l border-[#e3c976] pl-4 text-sm leading-relaxed text-[#d4e0e5]">
                 {cluster.areas}
               </p>
             </div>
-            <div className="rounded-2xl border border-white/15 bg-white/[0.07] p-6">
+            <div className="min-w-0 rounded-2xl border border-white/15 bg-white/[0.07] p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
                 The EasyFind view
               </p>
@@ -237,9 +237,9 @@ function ClusterPage() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.08fr_.92fr] lg:items-start">
-          <article className="space-y-12">
+      <main className="mx-auto max-w-6xl px-4 py-12 sm:px-5 md:px-8 md:py-16">
+        <div className="grid min-w-0 gap-10 xl:grid-cols-[1.08fr_.92fr] xl:items-start">
+          <article className="min-w-0 space-y-10 sm:space-y-12">
             <section>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                 Why this cluster matters
@@ -251,8 +251,8 @@ function ClusterPage() {
             </section>
 
             <section className="overflow-hidden rounded-2xl border border-[#e4e8ed] bg-[#fffdfa]">
-              <div className="grid min-h-[250px] lg:grid-cols-[1.15fr_.85fr]">
-                <div className="relative bg-[#edf1f0] p-7 md:p-9">
+              <div className="grid min-w-0 md:grid-cols-1 xl:grid-cols-[1.15fr_.85fr]">
+                <div className="relative min-w-0 bg-[#edf1f0] p-5 sm:p-7 md:p-9">
                   <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(90deg, rgba(35,67,95,.08) 1px, transparent 1px), linear-gradient(rgba(35,67,95,.08) 1px, transparent 1px)", backgroundSize: "34px 34px" }} />
                   <div className="relative">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
@@ -283,7 +283,7 @@ function ClusterPage() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#23435f] p-7 text-white md:p-9">
+                <div className="min-w-0 bg-[#23435f] p-5 text-white sm:p-7 md:p-9">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
                     EasyFind local brief
                   </p>
@@ -301,7 +301,7 @@ function ClusterPage() {
             </section>
 
             <section>
-              <div className="grid gap-4 md:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {cluster.signals.map((signal, index) => (
                   <div key={signal} className="rounded-2xl border border-[#e4e8ed] bg-white p-6">
                     <span className="font-serif text-2xl text-[#b89445]">
@@ -325,7 +325,7 @@ function ClusterPage() {
                 </div>
                 <MapPin className="hidden text-[#b89445] sm:block" size={28} />
               </div>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="mt-6 grid min-w-0 gap-4 sm:grid-cols-2">
                 {cluster.pockets.map((pocket) => (
                   <div key={pocket.name} className="rounded-2xl border border-[#e4e8ed] bg-white p-6">
                     <h3 className="font-serif text-2xl font-semibold text-[#23435f]">
@@ -385,7 +385,7 @@ function ClusterPage() {
           </article>
 
           <aside className="space-y-5 lg:sticky lg:top-8">
-            <div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
+            <div className="min-w-0 rounded-2xl bg-white p-5 shadow-sm sm:p-6 md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                 Start with the address
               </p>
@@ -416,7 +416,7 @@ function ClusterPage() {
               </a>
             </div>
 
-            <div className="rounded-2xl border border-[#e4e8ed] bg-[#f1eee6] p-6">
+            <div className="min-w-0 rounded-2xl border border-[#e4e8ed] bg-[#f1eee6] p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                 Local, not generic
               </p>
@@ -445,7 +445,7 @@ function ClusterPage() {
               All areas <ArrowRight size={15} />
             </a>
           </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {Object.entries(clusters)
               .filter(([key]) => key !== area)
               .map(([key, value]) => (
