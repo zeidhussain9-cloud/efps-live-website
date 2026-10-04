@@ -169,6 +169,14 @@ This backlog is derived from the supplied EasyFind quality reviews and the proje
 - Latest development deployment for the second commit is being built on service `srv-db19vcvavr4c73auv3c0`.
 - Production/main remains untouched.
 
-### Remaining Set 2 blockers
-- Accountable person / complaint-escalation identity cannot be added truthfully without a verified name and role. The project brief explicitly withholds founder/team identity from this release.
-- A direct public K-RERA agent-record confirmation could not be completed because the official agent-status endpoint timed out. No regulatory claim has been published as a workaround.
+### Remaining Set 2 deferred items
+- Accountable person / complaint-escalation identity remains intentionally unpublished. The project brief withholds founder/team identity from this release, and the owner has confirmed that no personal name should be made public for now.
+- RERA remains intentionally unclaimed. EasyFind has not applied for RERA, and no RERA registration claim or number is published.
+- The Google Business Profile address is now the temporary public address used on customer-facing website surfaces. The owner explicitly requested that this not block the remaining website work. The registered office remains separately identified in the Legal Notice.
+
+
+### Address decision — temporary public-facing configuration
+- Current public website address: **A Block, Prestige Atlanta, 1, 80 Feet Rd, 3rd Block, Koramangala 8th Block, Koramangala, Bengaluru, Karnataka 560034**, matching the current Google Business Profile information available to the project.
+- This is a temporary owner-directed website configuration. Do not describe it as the registered office.
+- The verified registered office remains in the Legal Notice only unless the owner later instructs otherwise.
+- Do not treat the GBP address as a blocker for Sets 3–7. Revisit the Google Business Profile/address strategy separately when the owner is ready.
