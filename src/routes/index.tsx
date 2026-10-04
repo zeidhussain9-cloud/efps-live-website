@@ -305,18 +305,6 @@ function Hero() {
               I own a property
             </button>
           </div>
-          <div className="mt-7 border-l border-[#e3c976] pl-4 text-left text-sm leading-relaxed text-white/70">
-            <span className="font-semibold text-white">Own a property?</span> Start with the
-            management route to see the work we can coordinate, the updates you can expect, and what
-            needs to be agreed first.{" "}
-            <button
-              type="button"
-              onClick={() => scrollTo("#manage-my-property")}
-              className="font-semibold text-[#e3c976] underline underline-offset-4"
-            >
-              See the owner route
-            </button>
-          </div>
         </div>
         <div className="mx-auto w-full max-w-[440px] rounded-2xl border border-white/15 bg-white/10 p-7 shadow-2xl backdrop-blur-sm lg:mx-0 lg:mt-8 lg:justify-self-end">
           <Eyebrow light>One clear next step</Eyebrow>
