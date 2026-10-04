@@ -16,6 +16,7 @@ type Cluster = {
   fit: string;
   decision: string;
   signals: string[];
+  localReading: { title: string; detail: string }[];
   pockets: { name: string; detail: string }[];
   questions: string[];
 };
@@ -31,6 +32,11 @@ const clusters: Record<string, Cluster> = {
       "A strong starting point when your search sits between Sarjapur Road, Harlur and the Outer Ring Road side of East Bengaluru.",
     decision:
       "Do not choose on the Sarjapur Road label alone. Compare the exact pocket, access road, destination and the last part of the journey.",
+    localReading: [
+      { title: "Start with the destination", detail: "Sarjapur Road, Harlur and Kasavanahalli can suit very different daily routines. Anchor the decision to the office, school or regular destination before comparing buildings." },
+      { title: "Then read the pocket", detail: "Harlur, Kasavanahalli and Kaikondrahalli are not interchangeable addresses. The internal road, the side of the corridor you use and the connection towards Bellandur or Sarjapur can change the practical choice." },
+      { title: "Check the last approach", detail: "For Gunjur-side and outer pockets especially, check the actual approach road and daily route rather than relying on the locality name or a map pin." },
+    ],
     signals: [
       "Harlur and Kasavanahalli connect the Sarjapur Road side with the Bellandur/ORR direction through a network of local roads.",
       "Kaikondrahalli and Kasavanahalli are established residential reference points within this corridor.",
@@ -71,6 +77,11 @@ const clusters: Record<string, Cluster> = {
       "A natural starting point for people working around the Outer Ring Road and for owners whose property sits in the Bellandur–Marathahalli belt.",
     decision:
       "Use the actual office gate, school route or daily destination as the anchor. Bellandur, Panathur and Marathahalli are not interchangeable simply because they are nearby.",
+    localReading: [
+      { title: "Anchor to the office", detail: "Bellandur–Marathahalli decisions often start with the actual office campus or gate. Devarabisanahalli, Kadubeesanahalli and Marathahalli can produce different daily approaches even within the same broad corridor." },
+      { title: "Separate the residential pockets", detail: "Panathur, Yemalur, Bellandur and the Marathahalli side should be compared as different choices, not as interchangeable points on a map. The building's approach road matters." },
+      { title: "Read the route, not just the distance", detail: "A property can look close to the destination while using a very different road network. For owners, the same local access question affects inspections, tenant visits and maintenance coordination." },
+    ],
     signals: [
       "The Devarabisanahalli/Bellandur side is closely associated with the Outer Ring Road office corridor.",
       "Kadubeesanahalli, Panathur and Yemalur create different access patterns even when the map distance looks small.",
@@ -110,6 +121,11 @@ const clusters: Record<string, Cluster> = {
       "A strong starting point when your work, family routine or property is tied to Whitefield, Hoodi, ITPL or Mahadevapura.",
     decision:
       "Whitefield is too large to treat as one neighbourhood. Start with the destination, then compare the exact pocket, road and last-mile connection.",
+    localReading: [
+      { title: "Whitefield is not one decision", detail: "Start with the actual work or family destination—Whitefield, ITPL, Hoodi or Mahadevapura—and work outward. The right pocket depends on which side of the wider corridor your routine sits on." },
+      { title: "Use transit as a local filter", detail: "The operational Whitefield–Challaghatta metro corridor makes station access relevant in parts of the cluster. It should be assessed alongside the exact property road and destination, not treated as a blanket benefit." },
+      { title: "Compare the east-side balance", detail: "Hoodi and Mahadevapura can make sense for people balancing Whitefield with inner-east or ORR-side destinations. The exact building and last-mile connection still decide the practical fit." },
+    ],
     signals: [
       "Whitefield has an established technology and commercial ecosystem around landmarks such as ITPL.",
       "Namma Metro's operational east–west corridor currently runs from Whitefield to Challaghatta, making station proximity a relevant factor in parts of this cluster.",
@@ -149,6 +165,11 @@ const clusters: Record<string, Cluster> = {
       "Useful for renters, buyers and owners who need to decide between HSR's interior sectors, ORR access, Koramangala and the Hosur Road side rather than treating them as one neighbourhood.",
     decision:
       "We would split this corridor before advising: first choose the side of HSR or Hosur Road that fits the daily destination; then compare the exact sector, road and property.",
+    localReading: [
+      { title: "Split HSR before comparing homes", detail: "HSR's numbered sectors create different relationships to ORR, Sarjapur Road, Hosur Road and local services. Start by identifying the sector and the side of HSR that fits the daily destination." },
+      { title: "Treat the edges as different choices", detail: "The ORR/Agara side and the Koramangala edge serve a different routine from the southern HSR and Hosur Road side. Bommanahalli, Hongasandra and Kudlu should be evaluated as their own route pattern." },
+      { title: "Test the actual road connection", detail: "For both renters and owners, the final approach can matter as much as the locality label. Check how the property connects to the route you will actually use for work, school, inspections or visits." },
+    ],
     signals: [
       "HSR Layout is organised into numbered sectors and main/cross roads; the sector can change the practical relationship to ORR, Sarjapur Road, Hosur Road and local services.",
       "BBMP road records specifically identify HSR routes such as 5th Main and 9th Main connecting the ORR side towards Yellukunte through Sectors 3 and 2.",
@@ -250,53 +271,31 @@ function ClusterPage() {
               <p className="mt-5 max-w-3xl leading-relaxed text-[#667384]">{cluster.fit}</p>
             </section>
 
-            <section className="overflow-hidden rounded-2xl border border-[#e4e8ed] bg-[#fffdfa]">
-              <div className="grid min-w-0 md:grid-cols-1 xl:grid-cols-[1.15fr_.85fr]">
-                <div className="relative min-w-0 bg-[#edf1f0] p-5 sm:p-7 md:p-9">
-                  <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(90deg, rgba(35,67,95,.08) 1px, transparent 1px), linear-gradient(rgba(35,67,95,.08) 1px, transparent 1px)", backgroundSize: "34px 34px" }} />
-                  <div className="relative">
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
-                      Local reading
-                    </p>
-                    <p className="mt-3 max-w-xl font-serif text-2xl font-semibold leading-tight text-[#23435f]">
-                      Read the corridor from the destination outward.
-                    </p>
-                    <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#667384]">
-                      EasyFind uses the road, work or school destination, residential pocket and last-mile approach as the practical frame—not a generic city guide.
-                    </p>
-                    <div className="mt-7 grid max-w-xl gap-3 sm:grid-cols-3">
-                      <div className="rounded-xl bg-white/80 p-4">
-                        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#b89445]">01</p>
-                        <p className="mt-2 text-sm font-semibold text-[#23435f]">Destination</p>
-                        <p className="mt-1 text-xs leading-relaxed text-[#667384]">Office, school or daily stop</p>
-                      </div>
-                      <div className="rounded-xl bg-white/80 p-4">
-                        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#b89445]">02</p>
-                        <p className="mt-2 text-sm font-semibold text-[#23435f]">Pocket</p>
-                        <p className="mt-1 text-xs leading-relaxed text-[#667384]">Exact sector, road or layout</p>
-                      </div>
-                      <div className="rounded-xl bg-white/80 p-4">
-                        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#b89445]">03</p>
-                        <p className="mt-2 text-sm font-semibold text-[#23435f]">Approach</p>
-                        <p className="mt-1 text-xs leading-relaxed text-[#667384]">Last-mile access and entry</p>
-                      </div>
+            <section className="rounded-2xl border border-[#e4e8ed] bg-[#fffdfa] p-6 sm:p-8 md:p-10">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
+                  Local reading
+                </p>
+                <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-[#23435f] md:text-4xl">
+                  Read the corridor from the destination outward.
+                </h2>
+                <p className="mt-4 text-base leading-7 text-[#667384]">
+                  EasyFind starts with the actual destination, then looks at the residential pocket and the road used to reach it. That is more useful than treating a large Bengaluru locality as one uniform market.
+                </p>
+              </div>
+
+              <div className="mt-8 grid gap-4 lg:grid-cols-3">
+                {cluster.localReading.map((item, index) => (
+                  <div key={item.title} className="rounded-xl border border-[#e4e8ed] bg-[#f8f7f2] p-5 sm:p-6">
+                    <div className="flex items-center gap-3">
+                      <span className="font-serif text-xl text-[#b89445]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <h3 className="font-semibold text-[#23435f]">{item.title}</h3>
                     </div>
+                    <p className="mt-4 text-sm leading-6 text-[#667384]">{item.detail}</p>
                   </div>
-                </div>
-                <div className="min-w-0 bg-[#23435f] p-5 text-white sm:p-7 md:p-9">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
-                    EasyFind local brief
-                  </p>
-                  <p className="mt-4 font-serif text-2xl font-semibold leading-tight">
-                    {cluster.decision}
-                  </p>
-                  <a
-                    href="/#contact"
-                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#e3c976] px-5 py-3 text-sm font-semibold text-[#23435f]"
-                  >
-                    Talk through this pocket <ArrowRight size={15} />
-                  </a>
-                </div>
+                ))}
               </div>
             </section>
 
