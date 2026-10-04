@@ -115,6 +115,31 @@ Production/main remains untouched until explicit approval.
 - Current root runtime metadata includes a production canonical.
 - These technical facts must be verified against the served development deployment before deciding whether a rendering/rebuild change is necessary.
 
+## Set 1 execution record — Technical truth and deployment hygiene
+
+### Verified before change
+- The repository is a Vite + React/TanStack Router application.
+- `vite.config.ts` already creates route-specific static HTML files for the declared pages during build. Therefore a full framework rebuild/SSR migration was **not** justified by the supplied crawler complaints alone.
+- The build already creates `robots.txt` and `sitemap.xml`.
+- Before this set, the generated robots policy was indexable and explicitly pointed to the production sitemap.
+- The development Render service is correctly attached to the `development` branch.
+
+### Implemented
+- Added environment-aware indexing control to the Vite static-page generation.
+- Development Render now has `VITE_SITE_INDEXABLE=false`.
+- Development builds now emit `noindex,nofollow,noarchive` on generated route HTML and `Disallow: /` in development `robots.txt`.
+- Production behaviour remains indexable by default unless the production environment explicitly sets the variable to false.
+- No `main` or production Render changes were made.
+
+### Deployment evidence
+- Development commit: `88ea7c6f82e7687a0335522db2cb74650a6c6a57`
+- Development deployment: `dep-db1cnvekemhc73fat0m0`
+- Deployment status: live
+- Development service: `srv-db19vcvavr4c73auv3c0`
+
+### Remaining verification
+The current tool session cannot directly fetch the Render subdomain response body, so served-header/response verification of the deployed `robots.txt` and HTML meta tag remains an explicit verification item. The code path and Render environment are established; the final HTTP-level check must be completed when a browser/fetch surface can access the deployment.
+
 ## Source basis
 
 This backlog is derived from the supplied EasyFind quality reviews and the project source-of-truth instructions. Conflicting recommendations have been retained only as verification questions, not as facts.
