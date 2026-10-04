@@ -97,8 +97,8 @@ function PropertyManagementGuide() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.08fr_.92fr] lg:items-start">
+      <main className="mx-auto max-w-6xl px-5 py-12 sm:px-5 md:px-8 md:py-16">
+        <div className="grid gap-12 xl:grid-cols-[1.08fr_.92fr] lg:items-start">
           <article className="space-y-16">
             <section className="grid gap-4 border-y border-[#dfe4e7] py-5 text-sm sm:grid-cols-3">
               <QuickFact label="This guide is for" text="India-based and NRI owners" />
@@ -124,7 +124,7 @@ function PropertyManagementGuide() {
               </p>
             </section>
 
-            <section id="the-easyfind-way" className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
+            <section id="the-easyfind-way" className="rounded-2xl bg-white p-5 shadow-sm sm:p-6 md:p-8">
               <div className="flex items-start gap-4">
                 <ShieldCheck className="mt-1 shrink-0 text-[#b89445]" size={23} />
                 <div>
