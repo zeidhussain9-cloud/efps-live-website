@@ -284,8 +284,7 @@ function Hero() {
             Choose the route that matches what you need today.
           </p>
           <p className="mt-6 text-sm leading-relaxed text-white/55 lg:max-w-lg">
-            Local property support across East Bengaluru, with practical coordination and a clear
-            next step.
+            Property support across East Bengaluru, with practical coordination and a clear next step.
           </p>
         </div>
 
@@ -366,43 +365,6 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
                 style={{ color: NAVY }}
               >
                 Read the owner guide <ArrowRight size={15} />
-              </a>
-            </div>
-          )}
-          {route.id === "manage-my-property" && (
-            <div className="mt-5 rounded-xl border border-[#e4e8ed] bg-white/70 p-5">
-              <p
-                className="text-xs font-semibold uppercase tracking-[.2em]"
-                style={{ color: GOLD }}
-              >
-                What happens after you enquire
-              </p>
-              <ol className="mt-3 space-y-2 text-sm leading-relaxed" style={{ color: INK }}>
-                <li>
-                  <span className="mr-2 font-semibold" style={{ color: GOLD }}>
-                    1.
-                  </span>
-                  Share the property situation and what needs attention.
-                </li>
-                <li>
-                  <span className="mr-2 font-semibold" style={{ color: GOLD }}>
-                    2.
-                  </span>
-                  Agree the scope, responsibilities, and update method.
-                </li>
-                <li>
-                  <span className="mr-2 font-semibold" style={{ color: GOLD }}>
-                    3.
-                  </span>
-                  Coordinate the agreed next step and report back.
-                </li>
-              </ol>
-              <a
-                href="#how-it-works"
-                className="mt-4 inline-flex text-sm font-semibold underline underline-offset-4"
-                style={{ color: NAVY }}
-              >
-                See the full process <ArrowRight size={15} className="ml-2" />
               </a>
             </div>
           )}
@@ -749,24 +711,24 @@ function HowItWorks() {
 function FAQ() {
   const questions = [
     [
-      "Do you list properties on the website?",
-      "No. We keep the website enquiry-led. Share your area, budget, preferences, or property need and we will guide the next conversation.",
+      "Can you help me find a rental or purchase property?",
+      "Yes. Start with the area, budget, property preferences and timing. EasyFind is enquiry-led rather than a live listings portal, so the first step is understanding the requirement.",
     ],
     [
-      "Can owners who live away get property support?",
-      "Yes, where the requirement and responsibilities are agreed in advance. We coordinate the next action and share agreed updates.",
+      "Can you manage a property while I live elsewhere?",
+      "Yes, where the requirement and responsibilities are agreed in advance. Depending on scope, this can include access, inspections, tenant coordination, repairs and agreed updates.",
     ],
     [
-      "When will I hear back after an enquiry?",
-      "We aim to acknowledge enquiries within one business day. Completion timelines depend on the requirement and the agreed scope.",
+      "What happens after I send an enquiry?",
+      "We aim to acknowledge enquiries within one business day. We then clarify the requirement, agree the scope and responsibilities, and identify the next practical action.",
     ],
     [
-      "How are fees handled?",
-      "Fees and any third-party or vendor charges are agreed case by case according to the requirement and scope. We do not publish a universal price list.",
+      "How are fees and third-party costs handled?",
+      "Fees are case by case. Any EasyFind fee and relevant vendor or third-party charges are agreed according to the requirement and scope before work begins.",
     ],
     [
-      "Which areas do you cover?",
-      "We focus on confirmed areas across the South-East and employment corridors. See the Areas section for the current coverage.",
+      "Which East Bengaluru areas do you cover?",
+      "Our current area structure is organised around Sarjapur Road, Bellandur–Marathahalli, Whitefield–Mahadevapura, and HSR–Hosur Road. Exact address-level coverage is confirmed for the requirement.",
     ],
   ];
   return (
