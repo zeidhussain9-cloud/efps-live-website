@@ -444,6 +444,15 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
                       </li>
                     ))}
                   </ul>
+                  {subsection.title === "For NRI owners and owners living abroad" && (
+                    <a
+                      href="/nri-property-management-bengaluru"
+                      className="mt-4 inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4"
+                      style={{ color: NAVY }}
+                    >
+                      NRI property management <ArrowRight size={15} />
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
