@@ -82,4 +82,4 @@ Pointers 38–46 are now in active development. Homepage FAQ/search-intent wordi
 
 
 Development note — Visual system and site-wide polish
-Pointers 47–70 are now in active development. The shared visual system, responsive spacing, navigation/header behaviour, footer hierarchy, guide-page layout, cluster-page alignment, CTA hierarchy, and site-wide content/link consistency are being polished on development. Final completion remains pending full device review and user approval.
+Pointers 47–70 are now in active development. The shared visual system has been consolidated around one navy/cream/gold palette, editorial typography, restrained borders, consistent controls, stronger homepage hierarchy, improved enquiry form presentation, unified guide/cluster styling, and responsive layout rules. Adobe Express was used for concrete visual exploration and a property-hero concept; the temporary Express design is not yet a repository asset. Final completion remains pending full device review and user approval.
