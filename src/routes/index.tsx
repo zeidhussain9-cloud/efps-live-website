@@ -546,6 +546,28 @@ function Services() {
 }
 
 function Areas() {
+  const clusters = [
+    [
+      "Bellandur–Marathahalli Cluster",
+      "Bellandur · Kadubeesanahalli · Panathur · Yemalur · Marathahalli · Varthur-side pockets",
+      "/areas/bellandur-marathahalli-cluster",
+    ],
+    [
+      "Sarjapur Road Cluster",
+      "Sarjapur Road · Harlur · Kasavanahalli · Kaikondrahalli · Gunjur-side pockets",
+      "/areas/sarjapur-road-cluster",
+    ],
+    [
+      "Whitefield–Mahadevapura Cluster",
+      "Whitefield · Hoodi · ITPL · Mahadevapura · surrounding pockets",
+      "/areas/whitefield-mahadevapura-cluster",
+    ],
+    [
+      "HSR–Hosur Road Cluster",
+      "HSR Layout · Koramangala · Bommanahalli · Kudlu · parts of Hosur Road",
+      "/areas/hsr-hosur-road-cluster",
+    ],
+  ];
   return (
     <section id="areas" className="py-20 md:py-28" style={{ background: NAVY }}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
@@ -563,47 +585,28 @@ function Areas() {
             </p>
           </div>
           <div className="grid gap-4">
-            <div className="border border-white/15 bg-white/5 p-6 md:p-7">
-              <h3 className="font-serif text-xl text-white">Bellandur–Marathahalli Cluster</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/65">
-                Bellandur · Kadubeesanahalli · Marathahalli · Yemalur · Whitefield · Hoodi · ITPL
-              </p>
+            {clusters.map(([title, areas, href]) => (
               <a
-                href="/areas/bellandur"
-                className="mt-4 inline-flex text-sm font-semibold text-white underline underline-offset-4"
+                key={href}
+                href={href}
+                className="group border border-white/15 bg-white/5 p-6 transition hover:-translate-y-0.5 hover:bg-white/10 md:p-7"
               >
-                See area guidance <ArrowRight size={15} className="ml-2" />
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="font-serif text-xl text-white">{title}</h3>
+                  <ArrowRight className="mt-1 shrink-0 text-[#e3c976]" size={18} />
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-white/65">{areas}</p>
+                <span className="mt-4 inline-flex text-sm font-semibold text-white underline underline-offset-4">
+                  Open cluster guide
+                </span>
               </a>
-            </div>
-            <div className="border border-white/15 bg-white/5 p-6 md:p-7">
-              <h3 className="font-serif text-xl text-white">Sarjapur Road Cluster</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/65">
-                HSR Layout · Kudlu Gate · Sarjapur Road · Kasavanahalli · Harlur · Varthur
-              </p>
-              <a
-                href="/areas/hsr-layout"
-                className="mt-4 inline-flex text-sm font-semibold text-white underline underline-offset-4"
-              >
-                See area guidance <ArrowRight size={15} className="ml-2" />
-              </a>
-            </div>
-            <div className="border border-white/15 bg-white/5 p-6 md:p-7">
-              <h3 className="font-serif text-xl text-white">Whitefield–Mahadevapura Cluster</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/65">
-                Mahadevapura · Panathur · Koramangala
-              </p>
-              <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-white underline underline-offset-4">
-                <a href="/areas/whitefield">Whitefield</a>
-                <a href="/areas/koramangala">Koramangala</a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
-
 function Reviews() {
   return (
     <section className="py-20 md:py-28" style={{ background: "#fff" }}>
