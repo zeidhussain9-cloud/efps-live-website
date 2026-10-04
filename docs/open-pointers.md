@@ -1,17 +1,17 @@
 # Open Pointers — EFPS Website Pending Fixes
 
-- [ ] 1. **Hero:** Replace the current generic positioning with the approved four-route customer journey.
-- [ ] 2. **Hero CTAs:** Make the four service choices directly connect to their corresponding sections.
-- [ ] 3. **Find a Property:** Rewrite around rental and purchase enquiries, requirements, preferences, and timing.
-- [ ] 4. **Rent Out or Sell:** Rewrite around owner enquiries, visits, documentation follow-up, handover, and next steps.
-- [ ] 5. **Manage My Property:** Build a stronger, specific property-management proposition.
-- [ ] 6. **NRI Property Management:** Strengthen the dedicated NRI-owner proposition and discoverability.
-- [ ] 7. **Prepare and Care:** Introduce the complete property-care scope beyond cleaning and pest control.
-- [ ] 8. **Service Sections:** Ensure each detailed section adds information rather than duplicating the hero.
-- [ ] 9. **Service Scope:** Clearly distinguish what EasyFind coordinates versus what third-party professionals perform.
-- [ ] 10. **Property Listings:** Remove any implication that the website is a live property-inventory portal.
-- [ ] 11. **Availability Claims:** Remove fake or unsupported live-availability implications.
-- [ ] 12. **Investment Advisory:** Remove or reposition anything that conflicts with the approved EFPS positioning.
+- [x] 1. **Hero:** Replace the current generic positioning with the approved four-route customer journey.
+- [x] 2. **Hero CTAs:** Make the four service choices directly connect to their corresponding sections.
+- [x] 3. **Find a Property:** Rewrite around rental and purchase enquiries, requirements, preferences, and timing.
+- [x] 4. **Rent Out or Sell:** Rewrite around owner enquiries, visits, documentation follow-up, handover, and next steps.
+- [x] 5. **Manage My Property:** Build a stronger, specific property-management proposition.
+- [x] 6. **NRI Property Management:** Strengthen the dedicated NRI-owner proposition and discoverability.
+- [x] 7. **Prepare and Care:** Introduce the complete property-care scope beyond cleaning and pest control.
+- [x] 8. **Service Sections:** Ensure each detailed section adds information rather than duplicating the hero.
+- [x] 9. **Service Scope:** Clearly distinguish what EasyFind coordinates versus what third-party professionals perform.
+- [x] 10. **Property Listings:** Remove any implication that the website is a live property-inventory portal.
+- [x] 11. **Availability Claims:** Remove fake or unsupported live-availability implications.
+- [x] 12. **Investment Advisory:** Remove or reposition anything that conflicts with the approved EFPS positioning.
 - [ ] 13. **Generic Brokerage Copy:** Replace generic real-estate/broker language throughout.
 - [ ] 14. **Marketing Superlatives:** Remove unsupported claims such as “premier,” “trusted,” or similar wording.
 - [ ] 15. **Experience Proof:** Replace generic experience claims with practical evidence of how EasyFind works.
@@ -70,3 +70,8 @@
 - [ ] 68. **Internal Linking:** Connect services, guides, NRI content, and area clusters logically.
 - [ ] 69. **Content Consistency:** Remove contradictions between different sections and pages.
 - [ ] 70. **Final Polish:** Review the entire site for consistency, restraint, clarity, trust, and premium presentation.
+
+
+## Completion note — Pointers 1–12
+
+Completed against the current repository implementation. The homepage now uses the approved four customer journeys as the primary hero decision structure. The four service sections cover the approved scope, the NRI route is discoverable from property management, property-listing/live-availability positioning is not used, and investment-advisory positioning is absent. Live production still needs deployment verification after this commit.
