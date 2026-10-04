@@ -287,8 +287,8 @@ function Hero() {
             <span style={{ color: "#e3c976" }}>Property Partner</span>
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/75 lg:mx-0">
-            We help people find homes and help property owners manage what matters—with a clear
-            point of contact and practical support.
+            We help people find homes and help owners rent out, manage, and prepare their property.
+            Start with the route that matches your situation.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
             <button
@@ -303,6 +303,18 @@ function Hero() {
               className="rounded-full border border-white/35 px-6 py-3.5 font-semibold text-white"
             >
               I own a property
+            </button>
+          </div>
+          <div className="mt-7 border-l border-[#e3c976] pl-4 text-left text-sm leading-relaxed text-white/70">
+            <span className="font-semibold text-white">Own a property?</span> Start with the
+            management route to see the work we can coordinate, the updates you can expect, and what
+            needs to be agreed first.{" "}
+            <button
+              type="button"
+              onClick={() => scrollTo("#manage-my-property")}
+              className="font-semibold text-[#e3c976] underline underline-offset-4"
+            >
+              See the owner route
             </button>
           </div>
         </div>
@@ -385,6 +397,43 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
                 style={{ color: NAVY }}
               >
                 Read the owner guide <ArrowRight size={15} />
+              </a>
+            </div>
+          )}
+          {route.id === "manage-my-property" && (
+            <div className="mt-5 rounded-xl border border-[#e4e8ed] bg-white/70 p-5">
+              <p
+                className="text-xs font-semibold uppercase tracking-[.2em]"
+                style={{ color: GOLD }}
+              >
+                What happens after you enquire
+              </p>
+              <ol className="mt-3 space-y-2 text-sm leading-relaxed" style={{ color: INK }}>
+                <li>
+                  <span className="mr-2 font-semibold" style={{ color: GOLD }}>
+                    1.
+                  </span>
+                  Share the property situation and what needs attention.
+                </li>
+                <li>
+                  <span className="mr-2 font-semibold" style={{ color: GOLD }}>
+                    2.
+                  </span>
+                  Agree the scope, responsibilities, and update method.
+                </li>
+                <li>
+                  <span className="mr-2 font-semibold" style={{ color: GOLD }}>
+                    3.
+                  </span>
+                  Coordinate the agreed next step and report back.
+                </li>
+              </ol>
+              <a
+                href="#how-it-works"
+                className="mt-4 inline-flex text-sm font-semibold underline underline-offset-4"
+                style={{ color: NAVY }}
+              >
+                See the full process <ArrowRight size={15} className="ml-2" />
               </a>
             </div>
           )}
@@ -727,7 +776,7 @@ function Contact() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
           <div>
             <Eyebrow>Start a conversation</Eyebrow>
-            <SectionTitle>Tell us what you need.</SectionTitle>
+            <SectionTitle>Tell us what you need for your property.</SectionTitle>
             <p className="mt-5 max-w-xl leading-relaxed" style={{ color: MUTED }}>
               Share the basics and we’ll help you identify the right next step. No listings
               catalogue—just a practical conversation about your requirement.
