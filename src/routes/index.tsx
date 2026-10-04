@@ -506,12 +506,11 @@ function ProofStrip() {
   const facts = [
     ["1,000+", "clients served"],
     ["4.9 ★", "Google rating", MAPS],
-    ["16", "confirmed areas"],
-    ["About 3 years", "serving East Bengaluru"],
+    ["About 5 years", "of operations"],
   ];
   return (
-    <section className="border-b bg-white py-5" aria-label="EasyFind facts">
-      <div className="mx-auto grid max-w-7xl gap-4 px-5 sm:grid-cols-4 md:px-8">
+    <section className="border-y bg-[#f7f5ef] py-8" aria-label="EasyFind facts">
+      <div className="mx-auto grid max-w-5xl gap-4 px-5 sm:grid-cols-3 md:px-8">
         {facts.map(([value, label, href]) => (
           <div
             key={label}
@@ -565,7 +564,7 @@ function Areas() {
           </div>
           <div className="grid gap-4">
             <div className="border border-white/15 bg-white/5 p-6 md:p-7">
-              <h3 className="font-serif text-xl text-white">Close to work</h3>
+              <h3 className="font-serif text-xl text-white">Bellandur–Marathahalli Cluster</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65">
                 Bellandur · Kadubeesanahalli · Marathahalli · Yemalur · Whitefield · Hoodi · ITPL
               </p>
@@ -577,7 +576,7 @@ function Areas() {
               </a>
             </div>
             <div className="border border-white/15 bg-white/5 p-6 md:p-7">
-              <h3 className="font-serif text-xl text-white">The South-East choice</h3>
+              <h3 className="font-serif text-xl text-white">Sarjapur Road Cluster</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65">
                 HSR Layout · Kudlu Gate · Sarjapur Road · Kasavanahalli · Harlur · Varthur
               </p>
@@ -589,7 +588,7 @@ function Areas() {
               </a>
             </div>
             <div className="border border-white/15 bg-white/5 p-6 md:p-7">
-              <h3 className="font-serif text-xl text-white">Connected areas</h3>
+              <h3 className="font-serif text-xl text-white">Whitefield–Mahadevapura Cluster</h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65">
                 Mahadevapura · Panathur · Koramangala
               </p>
@@ -1110,11 +1109,11 @@ function Index() {
       <Header />
       <main>
         <Hero />
-        <ProofStrip />
         <Services />
         <Areas />
         <Reviews />
         <WhyEasyFind />
+        <ProofStrip />
         <HowItWorks />
         <FAQ />
         <Contact />

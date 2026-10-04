@@ -35,32 +35,32 @@ const staticPages = [
     type: "website",
   },
   {
-    path: "/areas/bellandur",
-    title: "Renting & Property Management in Bellandur, Bengaluru | EasyFind",
+    path: "/areas/sarjapur-road-cluster",
+    title: "Sarjapur Road Cluster Property Guide | EasyFind",
     description:
-      "Looking to rent, buy or manage a property in Bellandur? EasyFind helps renters and owners with visits, tenants, repairs and handover.",
-    type: "website",
+      "Sarjapur Road, Harlur, Kasavanahalli and nearby pockets: work access, daily-life context and practical questions for property seekers and owners.",
+    type: "article",
   },
   {
-    path: "/areas/hsr-layout",
-    title: "Renting & Property Management in HSR Layout, Bengaluru | EasyFind",
+    path: "/areas/bellandur-marathahalli-cluster",
+    title: "Bellandur–Marathahalli Cluster Property Guide | EasyFind",
     description:
-      "Looking to rent, buy or manage a property in HSR Layout? EasyFind helps renters and owners with visits, tenants, repairs and handover.",
-    type: "website",
+      "Bellandur, Kadubeesanahalli, Panathur, Yemalur and Marathahalli: office hubs, access and practical property context.",
+    type: "article",
   },
   {
-    path: "/areas/whitefield",
-    title: "Renting & Property Management in Whitefield, Bengaluru | EasyFind",
+    path: "/areas/whitefield-mahadevapura-cluster",
+    title: "Whitefield–Mahadevapura Cluster Property Guide | EasyFind",
     description:
-      "Looking to rent, buy or manage a property in Whitefield? EasyFind helps renters and owners with visits, tenants, repairs and handover.",
-    type: "website",
+      "Whitefield, Hoodi, ITPL and Mahadevapura: technology hubs, daily-life context and practical property questions.",
+    type: "article",
   },
   {
-    path: "/areas/koramangala",
-    title: "Renting & Property Management in Koramangala, Bengaluru | EasyFind",
+    path: "/areas/hsr-hosur-road-cluster",
+    title: "HSR–Hosur Road Cluster Property Guide | EasyFind",
     description:
-      "Looking to rent, buy or manage a property in Koramangala? EasyFind helps renters and owners with visits, tenants, repairs and handover.",
-    type: "website",
+      "HSR Layout, Koramangala, Bommanahalli, Kudlu and Hosur Road: sectors, access and practical property context.",
+    type: "article",
   },
   {
     path: "/legal/privacy",
