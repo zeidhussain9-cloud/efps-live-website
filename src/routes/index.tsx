@@ -284,7 +284,7 @@ function Hero() {
           <h1 className="font-serif text-5xl font-semibold leading-[1.04] tracking-tight text-white sm:text-6xl">
             Your On-Ground
             <br />
-            <span style={{ color: "#e3c976" }}>Property Partner</span>
+            <span style={{ color: "#e3c976" }}> Property Partner</span>
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/75 lg:mx-0">
             We help people find homes and help owners rent out, manage, and prepare their property.
