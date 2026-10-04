@@ -79,3 +79,7 @@ Pointers 25–37 are in active development. The four cluster pages have been reb
 
 Development note — Intent, CTA and content refinement
 Pointers 38–46 are now in active development. Homepage FAQ/search-intent wording, enquiry hierarchy, repeated process copy, and generic East Bengaluru phrasing have been tightened. Final completion remains pending visual review and user approval.
+
+
+Development note — Visual system and site-wide polish
+Pointers 47–70 are now in active development. The shared visual system, responsive spacing, navigation/header behaviour, footer hierarchy, guide-page layout, cluster-page alignment, CTA hierarchy, and site-wide content/link consistency are being polished on development. Final completion remains pending full device review and user approval.
