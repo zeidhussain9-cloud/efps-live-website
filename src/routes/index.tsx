@@ -182,35 +182,35 @@ function Header() {
   ];
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-slate-200/70 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-8 md:py-4">
+      <div className="mx-auto flex min-h-16 max-w-7xl items-center justify-between px-4 py-3 sm:px-5 md:px-8 md:py-4">
         <Logo />
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:gap-8 md:flex">
           {links.map(([label, href]) => (
             <a key={href} href={href} className="text-sm font-medium" style={{ color: NAVY }}>
               {label}
             </a>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-2 lg:gap-3 md:flex">
           <a
             href={WHATSAPP}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border px-4 py-2 text-sm font-semibold"
+            className="whitespace-nowrap rounded-full border px-3.5 py-2 text-sm font-semibold lg:px-4"
             style={{ borderColor: GOLD, color: NAVY }}
           >
             WhatsApp us
           </a>
           <button
             onClick={() => scrollTo("#contact")}
-            className="rounded-full px-5 py-2.5 text-sm font-semibold"
+            className="whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold lg:px-5"
             style={{ background: NAVY, color: "white" }}
           >
             Start an enquiry
           </button>
         </div>
         <button
-          className="md:hidden"
+          className="flex shrink-0 p-2 md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
           style={{ color: NAVY }}
@@ -270,20 +270,20 @@ function SectionTitle({ children, light = false }: { children: ReactNode; light?
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-32" style={{ background: HERO }}>
-      <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 pb-20 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:pb-28">
-        <div className="mx-auto max-w-2xl pt-2 text-center lg:mx-0 lg:pt-12 lg:text-left">
+    <section id="top" className="relative overflow-hidden pt-24 sm:pt-28 md:pt-32" style={{ background: HERO }}>
+      <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 pb-14 sm:px-5 sm:pb-16 md:px-8 md:pb-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14 lg:pb-24">
+        <div className="mx-auto max-w-2xl pt-2 text-center lg:mx-0 lg:pt-10 lg:text-left">
           <Eyebrow light>EasyFind Property Solutions</Eyebrow>
-          <h1 className="font-serif text-5xl font-semibold leading-[1.04] tracking-tight text-white sm:text-6xl">
+          <h1 className="font-serif text-4xl font-semibold leading-[1.06] tracking-tight text-white sm:text-5xl md:text-6xl">
             Bengaluru Property,
             <br />
             <span style={{ color: "#e3c976" }}>Handled Properly.</span>
           </h1>
-          <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/75 lg:mx-0">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-white/75 sm:text-lg lg:mx-0">
             From finding your next home to managing your property from abroad, EasyFind helps.
             Choose the route that matches what you need today.
           </p>
-          <p className="mt-6 text-sm leading-relaxed text-white/55 lg:max-w-lg">
+          <p className="mt-5 text-sm leading-6 text-white/55 lg:max-w-lg">
             Property support across East Bengaluru, with practical coordination and a clear next step.
           </p>
         </div>
@@ -294,7 +294,7 @@ function Hero() {
               key={route.number}
               type="button"
               onClick={() => scrollTo(`#${route.id}`)}
-              className="group min-h-[150px] rounded-2xl border border-white/15 bg-white/[0.07] p-6 text-left transition hover:-translate-y-0.5 hover:bg-white/[0.11]"
+              className="group min-h-[150px] rounded-2xl border border-white/15 bg-white/[0.07] p-5 text-left transition hover:-translate-y-0.5 hover:bg-white/[0.11] sm:p-6"
             >
               <div className="flex items-start justify-between gap-4">
                 <span className="font-serif text-2xl" style={{ color: "#e3c976" }}>
@@ -321,11 +321,11 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
   return (
     <section
       id={route.id}
-      className="scroll-mt-24 py-20 md:py-28"
+      className="scroll-mt-20 py-16 sm:py-20 md:py-24"
       style={{ background: index % 2 === 0 ? "white" : CREAM }}
     >
       <div
-        className={`mx-auto grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-2 lg:gap-20 ${
+        className={`mx-auto grid max-w-7xl items-start gap-10 px-4 sm:px-5 md:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 ${
           reversed ? "lg:[&>div:first-child]:order-2" : ""
         }`}
       >
@@ -408,7 +408,7 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
             </div>
           )}
           {route.categories && (
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {route.categories.map((category) => (
                 <div
                   key={category.title}
@@ -434,7 +434,7 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
           </button>
         </div>
         <div
-          className="rounded-2xl border p-7 shadow-sm md:p-9"
+          className="rounded-2xl border p-6 shadow-sm sm:p-7 md:p-9"
           style={{ borderColor: "#e4e8ed", background: "rgba(255,255,255,.72)" }}
         >
           <p className="text-xs font-semibold uppercase tracking-[.2em]" style={{ color: GOLD }}>
@@ -468,10 +468,10 @@ function ProofStrip() {
     ["03", "One-business-day acknowledgement target", "Enquiries are acknowledged on that target; completion timing depends on scope."],
   ];
   return (
-    <section className="border-y bg-[#f7f5ef] py-8" aria-label="How EasyFind works">
-      <div className="mx-auto grid max-w-6xl gap-5 px-5 sm:grid-cols-3 md:px-8">
+    <section className="border-y bg-[#f7f5ef] py-7" aria-label="How EasyFind works">
+      <div className="mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-3 sm:px-5 md:px-8">
         {facts.map(([number, title, text]) => (
-          <div key={number} className="border-l border-[#e4e8ed] pl-4 first:border-l-0 sm:first:border-l-0">
+          <div key={number} className="border-l border-[#e4e8ed] pl-4 first:border-l-0 sm:first:border-l sm:first:pl-4">
             <span className="font-serif text-xl text-[#b89445]">{number}</span>
             <strong className="mt-2 block text-sm font-semibold text-[#23435f]">{title}</strong>
             <span className="mt-2 block text-xs leading-relaxed text-[#667384]">{text}</span>
@@ -524,9 +524,9 @@ function Areas() {
     ],
   ];
   return (
-    <section id="areas" className="py-20 md:py-28" style={{ background: NAVY }}>
-      <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <div className="grid items-start gap-12 md:grid-cols-[0.72fr_1.28fr] md:gap-16">
+    <section id="areas" className="py-16 sm:py-20 md:py-24" style={{ background: NAVY }}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 md:px-8">
+        <div className="grid items-start gap-10 md:grid-cols-[0.72fr_1.28fr] md:gap-14">
           <div>
             <Eyebrow light>Where we work</Eyebrow>
             <SectionTitle light>Four corridors. Four different property decisions.</SectionTitle>
@@ -566,9 +566,9 @@ function Areas() {
 function Reviews() {
   return (
     <section className="py-20 md:py-28" style={{ background: "#fff" }}>
-      <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 md:px-8">
         <Eyebrow>Google Business Profile</Eyebrow>
-        <div className="flex flex-col gap-6 rounded-2xl border border-[#e4e8ed] bg-[#f7f5ef] p-7 md:flex-row md:items-center md:justify-between md:p-9">
+        <div className="flex flex-col gap-6 rounded-2xl border border-[#e4e8ed] bg-[#f7f5ef] p-6 sm:p-7 md:flex-row md:items-center md:justify-between md:p-9">
           <div>
             <SectionTitle>Read what customers have shared.</SectionTitle>
             <p className="mt-4 max-w-2xl leading-relaxed" style={{ color: MUTED }}>
@@ -617,11 +617,11 @@ function WhyEasyFind() {
             practical support on the ground.
           </p>
         </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {points.map(([title, text]) => (
             <div
               key={title}
-              className="rounded-2xl border bg-white p-6"
+              className="rounded-2xl border bg-white p-5 sm:p-6"
               style={{ borderColor: "#e4e8ed" }}
             >
               <Check size={20} style={{ color: GOLD }} />
@@ -674,7 +674,7 @@ function HowItWorks() {
             situation, agree what is in scope, coordinate the agreed action, and report back.
           </p>
         </div>
-        <div className="mx-auto mt-12 grid max-w-6xl gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-10 grid max-w-6xl gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-4">
           {steps.map(([n, t, b]) => (
             <div
               key={n}
@@ -736,19 +736,19 @@ function FAQ() {
       className="border-y py-20 md:py-24"
       style={{ background: CREAM, borderColor: "#e4e8ed" }}
     >
-      <div className="mx-auto max-w-4xl px-5 md:px-8">
+      <div className="mx-auto max-w-4xl px-4 sm:px-5 md:px-8">
         <div className="text-center">
           <Eyebrow>Good to know</Eyebrow>
           <SectionTitle>A clearer conversation starts here.</SectionTitle>
         </div>
         <div
-          className="mt-10 divide-y rounded-2xl border bg-white px-6"
+          className="mt-8 divide-y rounded-2xl border bg-white px-4 sm:px-6"
           style={{ borderColor: "#e4e8ed" }}
         >
           {questions.map(([question, answer]) => (
             <details key={question} className="group py-5">
               <summary
-                className="flex cursor-pointer list-none items-center justify-between gap-6 font-semibold"
+                className="flex cursor-pointer list-none items-start justify-between gap-4 py-0 font-semibold leading-6"
                 style={{ color: NAVY }}
               >
                 {question}
@@ -773,7 +773,7 @@ function Contact() {
   return (
     <section id="contact" className="py-20 md:py-28" style={{ background: CREAM }}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
           <div>
             <Eyebrow>Start a conversation</Eyebrow>
             <SectionTitle>Tell us what you need for your property.</SectionTitle>
@@ -837,7 +837,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="mx-auto w-full max-w-[440px] rounded-2xl bg-white p-2 shadow-xl lg:mx-0 lg:justify-self-end">
+          <div className="mx-auto w-full max-w-[440px] overflow-hidden rounded-2xl bg-white p-2 shadow-xl lg:mx-0 lg:justify-self-end">
             <ContactForm onPrivacyClick={() => scrollTo("#privacy")} />
           </div>
         </div>
@@ -871,7 +871,7 @@ function Contact() {
             title="EasyFind Property Solutions on Google Maps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4847368668495!2d77.62215847587636!3d12.94079861555562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15229e6c1a61%3A0x26a05f018e301661!2sEasyFind%20Property%20Solutions!5e0!3m2!1sen!2sin!4v1710321234567!5m2!1sen!2sin"
             width="100%"
-            height="240"
+            height="280"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
