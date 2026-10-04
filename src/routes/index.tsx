@@ -271,64 +271,52 @@ function SectionTitle({ children, light = false }: { children: ReactNode; light?
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-32" style={{ background: HERO }}>
-      <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-5 pb-20 md:px-8 lg:grid-cols-2 lg:gap-16 lg:pb-28">
+      <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 pb-20 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:pb-28">
         <div className="mx-auto max-w-2xl pt-2 text-center lg:mx-0 lg:pt-12 lg:text-left">
           <Eyebrow light>EasyFind Property Solutions</Eyebrow>
           <h1 className="font-serif text-5xl font-semibold leading-[1.04] tracking-tight text-white sm:text-6xl">
-            Your On-Ground
+            Bengaluru Property,
             <br />
-            <span style={{ color: "#e3c976" }}> Property Partner</span>
+            <span style={{ color: "#e3c976" }}>Handled Properly.</span>
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/75 lg:mx-0">
-            We help people find homes and help owners rent out, manage, and prepare their property.
-            Start with the route that matches your situation.
+            From finding your next home to managing your property from abroad, EasyFind helps.
+            Choose the route that matches what you need today.
           </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
-            <button
-              onClick={() => scrollTo("#find-a-property")}
-              className="rounded-full px-6 py-3.5 font-semibold"
-              style={{ background: "#e3c976", color: NAVY }}
-            >
-              I’m looking to rent or buy <ArrowRight className="ml-2 inline" size={17} />
-            </button>
-            <button
-              onClick={() => scrollTo("#rent-out-my-property")}
-              className="rounded-full border border-white/35 px-6 py-3.5 font-semibold text-white"
-            >
-              I own a property
-            </button>
-          </div>
+          <p className="mt-6 text-sm leading-relaxed text-white/55 lg:max-w-lg">
+            Local property support across East Bengaluru, with practical coordination and a clear
+            next step.
+          </p>
         </div>
-        <div className="mx-auto w-full max-w-[440px] rounded-2xl border border-white/15 bg-white/10 p-7 shadow-2xl backdrop-blur-sm lg:mx-0 lg:mt-8 lg:justify-self-end">
-          <Eyebrow light>One clear next step</Eyebrow>
-          <h2 className="font-serif text-3xl font-semibold leading-tight text-white">
-            Tell us what your property needs.
-          </h2>
-          <p className="mt-4 leading-relaxed text-white/70">
-            Share the situation once and we’ll help you choose the right next route.
-          </p>
-          <div className="mt-7 space-y-3">
-            {routes.map((route) => (
-              <button
-                key={route.number}
-                type="button"
-                onClick={() => scrollTo(`#${route.id}`)}
-                className="flex w-full items-center justify-between rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-left transition hover:bg-white/15"
-              >
-                <span className="flex items-center gap-3 text-sm font-semibold text-white">
-                  <span style={{ color: "#e3c976" }}>{route.number}</span>
-                  {route.title}
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          {routes.map((route) => (
+            <button
+              key={route.number}
+              type="button"
+              onClick={() => scrollTo(`#${route.id}`)}
+              className="group min-h-[150px] rounded-2xl border border-white/15 bg-white/[0.07] p-6 text-left transition hover:-translate-y-0.5 hover:bg-white/[0.11]"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <span className="font-serif text-2xl" style={{ color: "#e3c976" }}>
+                  {route.number}
                 </span>
-                <ArrowRight size={16} className="text-white/70" />
-              </button>
-            ))}
-          </div>
+                <ArrowRight
+                  size={17}
+                  className="mt-1 text-white/50 transition group-hover:translate-x-1 group-hover:text-white"
+                />
+              </div>
+              <h2 className="mt-6 font-serif text-xl font-semibold leading-tight text-white">
+                {route.title}
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-white/60">{route.text}</p>
+            </button>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-
 function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index: number }) {
   const reversed = index % 2 === 1;
   return (
