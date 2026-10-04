@@ -43,7 +43,7 @@ function PropertyManagementGuide() {
         />
         <link
           rel="canonical"
-          href="https://easyfindprops.com/guides/property-management-bengaluru"
+          href="https://www.easyfindprops.com/guides/property-management-bengaluru"
         />
       </Helmet>
       <InformationHeader />
