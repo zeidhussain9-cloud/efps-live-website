@@ -46,7 +46,7 @@ function NriPropertyManagement() {
         />
       </Helmet>
       <InformationHeader />
-      <section className="bg-[#23435f] px-5 py-16 text-white md:px-8 md:py-24">
+      <section className="bg-[#23435f] px-5 py-12 text-white sm:px-5 md:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">
             For owners living abroad
@@ -76,9 +76,9 @@ function NriPropertyManagement() {
           </div>
         </div>
       </section>
-      <main className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.08fr_.92fr]">
-          <article className="space-y-12">
+      <main className="mx-auto max-w-6xl px-5 py-12 sm:px-5 md:px-8 md:py-16">
+        <div className="grid gap-12 xl:grid-cols-[1.08fr_.92fr]">
+          <article className="space-y-10 sm:space-y-12">
             <section>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                 The questions owners carry
@@ -128,7 +128,7 @@ function NriPropertyManagement() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
                 How it works
               </p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {[
                   [
                     "01",
@@ -217,7 +217,7 @@ function NriPropertyManagement() {
               </p>
             </section>
           </article>
-          <aside className="h-fit rounded-2xl bg-white p-6 shadow-sm lg:sticky lg:top-8">
+          <aside className="h-fit rounded-2xl bg-white p-5 shadow-sm sm:p-6 xl:sticky xl:top-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b89445]">
               Start with the property
             </p>
