@@ -273,7 +273,7 @@ function Areas() {
 }
 
 function Reviews() {
-  return <section className="ef-section bg-white"><div className="mx-auto max-w-7xl px-4 sm:px-5 md:px-8"><Eyebrow>Google Business Profile</Eyebrow><div className="ef-panel-soft flex flex-col gap-6 p-6 sm:p-7 md:flex-row md:items-center md:justify-between md:p-9"><div className="max-w-2xl"><SectionTitle>Read what customers have shared.</SectionTitle><p className="mt-4 leading-7 text-brand-muted">We do not reproduce a fixed rating or review count here. The public Google Business Profile is the source for current customer feedback.</p></div><a href={MAPS} target="_blank" rel="noreferrer" className="ef-button shrink-0 bg-brand-navy text-white">Read reviews on Google <ArrowRight size={15}/></a></div></div></section>;
+  return <section className="ef-section bg-white"><div className="mx-auto max-w-7xl px-4 sm:px-5 md:px-8"><Eyebrow>Google Business Profile</Eyebrow><div className="ef-panel-soft flex flex-col gap-6 p-6 sm:p-7 md:flex-row md:items-center md:justify-between md:p-9"><div className="max-w-2xl"><div className="flex flex-wrap items-baseline gap-3"><SectionTitle>4.9★ from 95 Google reviews.</SectionTitle><span className="text-sm font-semibold text-brand-muted">Current public listing</span></div><p className="mt-4 leading-7 text-brand-muted">Customer feedback stays on Google so the source remains visible and current. We do not reproduce individual reviews here without a direct verified export from the profile.</p></div><a href={MAPS} target="_blank" rel="noreferrer" className="ef-button shrink-0 bg-brand-navy text-white">Read reviews on Google <ArrowRight size={15}/></a></div></div></section>;
 }
 
 function WhyEasyFind() {
