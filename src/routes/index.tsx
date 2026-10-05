@@ -244,11 +244,12 @@ function ServiceRoute({ route, index }: { route: (typeof routes)[number]; index:
 
 function ProofStrip() {
   const facts = [
-    ["01", "Four clear service routes", "Find, rent out or sell, manage, or prepare and care."],
-    ["02", "Scope agreed before work", "Responsibilities, updates, and third-party coordination are clarified first."],
-    ["03", "One-business-day acknowledgement target", "Enquiries are acknowledged on that target; completion timing depends on scope."],
+    ["01", "1,000+ clients served", "A company figure confirmed for this release."],
+    ["02", "4.9★ on Google", "95 reviews on the current public Google Business Profile."],
+    ["03", "16 East Bengaluru areas", "The current working-area list across the site."],
+    ["04", "About 3 years in East Bengaluru", "Operating history predates the April 2026 company incorporation."],
   ];
-  return <section className="border-y border-brand-border bg-brand-cream py-7"><div className="mx-auto grid max-w-6xl gap-6 px-4 sm:grid-cols-3 sm:px-5 md:px-8">{facts.map(([n,t,b])=><div key={n} className="border-l border-brand-border pl-5 first:border-l-0 sm:first:border-l sm:first:pl-5"><span className="font-serif text-2xl text-brand-gold">{n}</span><strong className="mt-2 block text-sm text-brand-navy">{t}</strong><span className="mt-2 block text-xs leading-5 text-brand-muted">{b}</span></div>)}</div></section>;
+  return <section className="border-y border-brand-border bg-brand-cream py-7"><div className="mx-auto grid max-w-7xl gap-5 px-4 sm:px-2 sm:grid-cols-2 lg:grid-cols-4 sm:px-5 md:px-8">{facts.map(([n,t,b])=><div key={n} className="border-l border-brand-border pl-5 first:border-l-0 sm:first:border-l sm:first:pl-5"><span className="font-serif text-2xl text-brand-gold">{n}</span><strong className="mt-2 block text-sm text-brand-navy">{t}</strong><span className="mt-2 block text-xs leading-5 text-brand-muted">{b}</span></div>)}</div></section>;
 }
 
 function Services() { return <div id="services">{routes.map((route,index)=><ServiceRoute key={route.id} route={route} index={index}/>)}</div>; }
