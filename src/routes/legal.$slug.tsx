@@ -1,6 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
 
 const pages = {
   privacy: {
@@ -122,17 +120,8 @@ function LegalPage() {
   const { slug } = Route.useParams();
   const page = pages[slug as keyof typeof pages] ?? pages.privacy;
 
-  useEffect(() => {
-    document.title = `${page.title} | EasyFind Property Solutions`;
-  }, [page.title]);
-
   return (
     <div className="min-h-screen bg-[#f7f5ef] text-[#223044]">
-      <Helmet>
-        <title>{page.title} | EasyFind Property Solutions</title>
-        <meta name="description" content={page.intro} />
-        <link rel="canonical" href={`https://www.easyfindprops.com/legal/${slug}`} />
-      </Helmet>
       <header className="border-b border-[#e4e8ed] bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-5 md:px-8">
           <a
