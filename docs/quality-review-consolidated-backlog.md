@@ -180,3 +180,40 @@ This backlog is derived from the supplied EasyFind quality reviews and the proje
 - This is a temporary owner-directed website configuration. Do not describe it as the registered office.
 - The verified registered office remains in the Legal Notice only unless the owner later instructs otherwise.
 - Do not treat the GBP address as a blocker for Sets 3–7. Revisit the Google Business Profile/address strategy separately when the owner is ready.
+
+## Remaining execution — Sets 3–7
+
+### Set 3 — Authentic experience proof
+- **Implemented where evidence exists:** the site uses the confirmed operating-history statement and the confirmed client-count figure from the supplied release brief.
+- **Intentionally deferred:** case studies, original property/work photography, and responsible-person attribution. The supplied brief explicitly reserves case stories, photos and founder/team information for a later Phase 2 release. No invented substitutes were added.
+- **Status:** no technical blocker; evidence-dependent additions remain deferred by source instruction.
+
+### Set 4 — Expertise and authority
+- **Implemented:** practical service methodology is now visible through the owner guide, NRI page, customer-protection page, four cluster guides, and the enquiry/process sections.
+- **Intentionally deferred:** named author/reviewer credentials and external authority claims because no verified public source was supplied for them.
+- **Google proof:** the current public business listing was checked through the business search surface and returned 4.9/5 from 95 reviews, with the current Google Business Profile address and phone. The website now displays the current rating/count and links directly to the profile.
+- **Review markup:** no self-published Review/AggregateRating schema was added.
+
+### Set 5 — Local evidence
+- Four cluster guides are implemented around practical property decisions, pockets, road/destination checks, and customer-journey CTAs.
+- No unsupported rent ranges, yields, availability, commute-time guarantees, or market figures were added.
+- The four guides link back into the four service journeys and the NRI/owner content.
+
+### Set 6 — Search intent and conversion
+- Homepage, NRI, owner guide, customer-protection, and cluster pages each have a defined user problem and next action.
+- Hero/service CTA hierarchy remains enquiry-led with WhatsApp and the on-site enquiry form.
+- The website explicitly avoids live-inventory positioning.
+- No new service landing pages were added without evidence of a corresponding EasyFind service.
+
+### Set 7 — UX, visual and performance QA
+- Development Render remains isolated on the `development` branch.
+- All 13 declared static routes returned HTTP 200 during the current development QA pass.
+- Development pages emit `noindex,nofollow,noarchive`; development `robots.txt` returns `Disallow: /`.
+- Route metadata was tested through the deployed HTML. Duplicate runtime title/description/canonical output was found and removed from the route components so build-time metadata is the single source.
+- Homepage organization structured data is now emitted at build time. It uses verified company/contact/area information and the Google Business Profile link; it does not publish the registered office or an unverified operating-office claim in structured data.
+- Mobile homepage capture was successfully rendered at 390×844 for QA.
+- The repository `og-image.jpg` is 176,617 bytes in the development tree, below the brief's approximately 300 KB target.
+- Production/main remains untouched.
+
+### Evidence-dependent items intentionally not fabricated
+The following remain available for a later evidence-backed Phase 2 rather than blocking the current release: real case studies, permissioned original property photography, named author/reviewer credentials, third-party authority claims, and any additional regulatory/accountability claims requiring documentation.
