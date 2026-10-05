@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 
 import "../styles.css";
 
@@ -73,18 +73,6 @@ function RootComponent() {
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/easyfind-logo.webp" type="image/webp" />
-          <link rel="canonical" href="https://www.easyfindprops.com" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-          />
-        </Helmet>
         <Outlet />
       </QueryClientProvider>
     </HelmetProvider>
