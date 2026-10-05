@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Helmet } from "react-helmet-async";
 import { ArrowRight, Check, MapPin } from "lucide-react";
 import {
   ContactLinks,
