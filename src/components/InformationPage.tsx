@@ -11,17 +11,17 @@ const CALL = "tel:+919148338801";
 
 export function InformationHeader() {
   return (
-    <header className="border-b border-[#e4e8ed] bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
+    <header className="border-b border-brand-border bg-white">
+      <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-5 md:px-8">
         <a href="/" className="flex items-center gap-3">
-          <img src="/easyfind-logo.webp" alt="EasyFind Property Solutions" className="h-9 w-auto" />
-          <span className="hidden text-sm font-semibold text-[#23435f] sm:inline">
+          <img src="/easyfind-logo.webp" alt="EasyFind Property Solutions" className="h-8 w-auto sm:h-9" />
+          <span className="hidden text-sm font-semibold text-brand-navy sm:inline">
             EasyFind Property Solutions
           </span>
         </a>
         <a
           href="/#contact"
-          className="text-sm font-semibold text-[#23435f] underline underline-offset-4"
+          className="whitespace-nowrap text-sm font-semibold text-brand-navy underline underline-offset-4"
         >
           Start an enquiry
         </a>
@@ -32,15 +32,15 @@ export function InformationHeader() {
 
 export function InformationFooter() {
   return (
-    <footer className="border-t border-[#e4e8ed] bg-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm md:flex-row md:items-center md:justify-between md:px-8">
+    <footer className="border-t border-brand-border bg-white">
+      <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-8 text-sm sm:px-5 md:flex-row md:items-center md:justify-between md:px-8">
         <div>
-          <p className="font-semibold text-[#23435f]">EasyFind Property Solutions</p>
-          <p className="mt-1 text-xs text-[#667384]">
+          <p className="font-semibold text-brand-navy">EasyFind Property Solutions</p>
+          <p className="mt-1 text-xs text-brand-muted">
             Customer-facing brand of EASYFIND REALTY SOLUTIONS PRIVATE LIMITED.
           </p>
         </div>
-        <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#23435f]">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-brand-navy">
           <a href="/guides/property-management-bengaluru" className="underline underline-offset-2">
             Property guides
           </a>
@@ -75,7 +75,7 @@ export function PageIntro({
   children: ReactNode;
 }) {
   return (
-    <section className="bg-[#23435f] px-5 py-16 text-white md:px-8 md:py-24">
+    <section className="relative overflow-hidden bg-brand-navy px-5 py-16 text-white md:px-8 md:py-24">
       <div className="mx-auto max-w-6xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e3c976]">{eyebrow}</p>
         <h1 className="mt-4 max-w-3xl font-serif text-4xl font-semibold leading-tight md:text-6xl">
@@ -91,10 +91,10 @@ export function PageIntro({
 
 export function ContactStrip({ label = "Have a question before you start?" }: { label?: string }) {
   return (
-    <div className="mt-12 flex flex-col gap-5 rounded-2xl bg-[#e9eff1] p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+    <div className="mt-12 flex flex-col gap-5 rounded-2xl border border-brand-border bg-[#e9eff1] p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
       <div>
-        <p className="font-serif text-2xl font-semibold text-[#23435f]">{label}</p>
-        <p className="mt-2 text-sm leading-relaxed text-[#667384]">
+        <p className="font-serif text-2xl font-semibold text-brand-navy">{label}</p>
+        <p className="mt-2 text-sm leading-relaxed text-brand-muted">
           Share the situation and we will help you identify the right next step.
         </p>
       </div>
@@ -102,7 +102,7 @@ export function ContactStrip({ label = "Have a question before you start?" }: { 
         href={WHATSAPP}
         target="_blank"
         rel="noreferrer"
-        className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#23435f] px-5 py-3 text-sm font-semibold text-white"
+        className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white"
       >
         Talk to EasyFind <ArrowRight size={16} />
       </a>
@@ -117,24 +117,24 @@ export function ContactLinks() {
         href={WHATSAPP}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center gap-3 rounded-xl border border-[#e4e8ed] bg-white p-4"
+        className="flex items-center gap-3 rounded-xl border border-brand-border ef-panel-soft p-4"
       >
         <MessageCircle size={18} style={{ color: "#176b3a" }} />
-        <span className="text-sm font-semibold text-[#23435f]">WhatsApp us</span>
+        <span className="text-sm font-semibold text-brand-navy">WhatsApp us</span>
       </a>
       <a
         href={CALL}
-        className="flex items-center gap-3 rounded-xl border border-[#e4e8ed] bg-white p-4"
+        className="flex items-center gap-3 rounded-xl border border-brand-border ef-panel-soft p-4"
       >
         <Phone size={18} style={{ color: NAVY }} />
-        <span className="text-sm font-semibold text-[#23435f]">Call EasyFind</span>
+        <span className="text-sm font-semibold text-brand-navy">Call EasyFind</span>
       </a>
       <a
         href="mailto:info@easyfindprops.com"
-        className="flex items-center gap-3 rounded-xl border border-[#e4e8ed] bg-white p-4"
+        className="flex items-center gap-3 rounded-xl border border-brand-border ef-panel-soft p-4"
       >
         <Mail size={18} style={{ color: GOLD }} />
-        <span className="text-sm font-semibold text-[#23435f]">Email us</span>
+        <span className="text-sm font-semibold text-brand-navy">Email us</span>
       </a>
     </div>
   );
@@ -142,10 +142,10 @@ export function ContactLinks() {
 
 export function CheckList({ items }: { items: string[] }) {
   return (
-    <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#667384]">
+    <ul className="mt-4 space-y-3 text-sm leading-relaxed text-brand-muted">
       {items.map((item) => (
         <li key={item} className="flex gap-3">
-          <Check className="mt-0.5 shrink-0 text-[#b89445]" size={16} />
+          <Check className="mt-0.5 shrink-0 text-brand-gold" size={16} />
           <span>{item}</span>
         </li>
       ))}

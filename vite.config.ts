@@ -107,19 +107,36 @@ function pageHead(page: (typeof staticPages)[number]) {
   const url = `${base}${page.path === "/" ? "/" : page.path}`;
   const title = escapeHtml(page.title);
   const description = escapeHtml(page.description);
-  return `<meta name="description" content="${description}"><link rel="canonical" href="${url}"><meta property="og:site_name" content="EasyFind Property Solutions"><meta property="og:locale" content="en_IN"><meta property="og:type" content="${page.type}"><meta property="og:url" content="${url}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:image" content="${base}/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${base}/og-image.jpg">`;
+  const organization = page.path === "/" ? `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EasyFind Property Solutions",
+    "legalName": "EASYFIND REALTY SOLUTIONS PRIVATE LIMITED",
+    "url": base + "/",
+    "logo": base + "/easyfind-logo.jpg",
+    "image": base + "/og-image.jpg",
+    "telephone": "+919148338801",
+    "email": "info@easyfindprops.com",
+    "areaServed": ["East Bengaluru", "Bellandur", "Marathahalli", "Whitefield", "Mahadevapura", "Sarjapur Road", "HSR Layout", "Koramangala"],
+    "sameAs": ["https://maps.app.goo.gl/aFny22T8D57v5dzK8"]
+  })}</script>` : "";
+  return `<meta name="description" content="${description}"><link rel="canonical" href="${url}"><meta property="og:site_name" content="EasyFind Property Solutions"><meta property="og:locale" content="en_IN"><meta property="og:type" content="${page.type}"><meta property="og:url" content="${url}"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:image" content="${base}/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${base}/og-image.jpg">${organization}`;
 }
 
 function renderStaticHead(html: string, page: (typeof staticPages)[number]) {
+  const isIndexable = process.env.VITE_SITE_INDEXABLE !== "false";
   const withoutRouteTags = html
     .replace(/<title>.*?<\/title>/s, "")
     .replace(/<meta name="description"[^>]*>/g, "")
     .replace(/<link rel="canonical"[^>]*>/g, "")
     .replace(/<meta property="og:[^>]*>/g, "")
     .replace(/<meta name="twitter:[^>]*>/g, "");
+  const robotsTag = isIndexable
+    ? ""
+    : '<meta name="robots" content="noindex,nofollow,noarchive">';
   return withoutRouteTags.replace(
     "</head>",
-    `<title>${escapeHtml(page.title)}</title>${pageHead(page)}</head>`,
+    `<title>${escapeHtml(page.title)}</title>${robotsTag}${pageHead(page)}</head>`,
   );
 }
 
@@ -133,9 +150,12 @@ function staticSpaRoutes() {
         mkdirSync(routeDir, { recursive: true });
         writeFileSync(join(routeDir, "index.html"), renderStaticHead(baseHtml, page));
       }
+      const isIndexable = process.env.VITE_SITE_INDEXABLE !== "false";
       writeFileSync(
         join("dist", "robots.txt"),
-        "User-agent: *\nAllow: /\nSitemap: https://www.easyfindprops.com/sitemap.xml\n",
+        isIndexable
+          ? "User-agent: *\nAllow: /\nSitemap: https://www.easyfindprops.com/sitemap.xml\n"
+          : "User-agent: *\nDisallow: /\n",
       );
       writeFileSync(
         join("dist", "sitemap.xml"),
