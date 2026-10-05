@@ -14,14 +14,6 @@ export const Route = createFileRoute("/customer-protection")({ component: Custom
 function CustomerProtection() {
   return (
     <div className="min-h-screen bg-[#f7f5ef] text-[#223044]">
-      <Helmet>
-        <title>Customer Protection | EasyFind Property Solutions</title>
-        <meta
-          name="description"
-          content="Understand EasyFind's service scope, fees, payment steps, documents, and escalation route before work begins."
-        />
-        <link rel="canonical" href="https://www.easyfindprops.com/customer-protection" />
-      </Helmet>
       <InformationHeader />
       <PageIntro
         eyebrow="A clearer way to work with EasyFind"
