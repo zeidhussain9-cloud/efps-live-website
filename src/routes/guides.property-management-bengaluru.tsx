@@ -34,17 +34,6 @@ const areas = [
 function PropertyManagementGuide() {
   return (
     <div className="ef-page">
-      <Helmet>
-        <title>Property Management in Bengaluru: A Practical Owner&apos;s Guide | EasyFind</title>
-        <meta
-          name="description"
-          content="What property owners actually need from a property-support provider: agreed work, access, repairs, handover, proof, and clear updates when you are away."
-        />
-        <link
-          rel="canonical"
-          href="https://www.easyfindprops.com/guides/property-management-bengaluru"
-        />
-      </Helmet>
       <InformationHeader />
 
       <section className="overflow-hidden bg-brand-navy px-5 py-14 text-white md:px-8 md:py-20">
