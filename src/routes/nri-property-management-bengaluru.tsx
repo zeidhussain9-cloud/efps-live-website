@@ -33,17 +33,6 @@ const areas = [
 function NriPropertyManagement() {
   return (
     <div className="ef-page">
-      <Helmet>
-        <title>NRI Property Management in Bengaluru | EasyFind</title>
-        <meta
-          name="description"
-          content="On-the-ground property support for NRI owners in East Bengaluru: tenant coordination, inspections, repairs and handover, with photo updates."
-        />
-        <link
-          rel="canonical"
-          href="https://www.easyfindprops.com/nri-property-management-bengaluru"
-        />
-      </Helmet>
       <InformationHeader />
       <section className="bg-brand-navy px-5 py-12 text-white sm:px-5 md:px-8 md:py-20">
         <div className="mx-auto max-w-6xl">
