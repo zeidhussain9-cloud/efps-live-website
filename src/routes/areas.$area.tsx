@@ -208,18 +208,6 @@ function ClusterPage() {
 
   return (
     <div className="ef-page">
-      <Helmet>
-        <title>{cluster.name} Property Guide | EasyFind</title>
-        <meta
-          name="description"
-          content={
-            cluster.name +
-            ": practical property context, local pockets, decision points and support for renters and owners in Bengaluru."
-          }
-        />
-        <link rel="canonical" href={"https://www.easyfindprops.com/areas/" + area} />
-      </Helmet>
-
       <InformationHeader />
 
       <section className="relative overflow-hidden bg-brand-navy px-4 py-12 text-white sm:px-5 md:px-8 md:py-20"><div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#19364f]/50 to-transparent" aria-hidden="true"/>
