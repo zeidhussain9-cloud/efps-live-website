@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   Check,
@@ -317,16 +316,6 @@ function Footer() {
 function Index() {
   return (
     <div className="ef-page">
-      <Helmet>
-        <title>EasyFind | Rent, Manage & Care for Property in East Bengaluru</title>
-        <meta name="description" content="EasyFind helps people find homes and helps property owners manage what matters—with a clear point of contact and practical support." />
-        <link rel="canonical" href="https://www.easyfindprops.com/" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context":"https://schema.org","@type":"RealEstateAgent","name":"EasyFind Property Solutions","legalName":"EASYFIND REALTY SOLUTIONS PRIVATE LIMITED",
-          "url":"https://www.easyfindprops.com/","logo":"https://www.easyfindprops.com/easyfind-logo.jpg","image":"https://www.easyfindprops.com/og-image.jpg",
-          "telephone":"+919148338801","email":"info@easyfindprops.com","areaServed":["Bellandur","Whitefield","HSR Layout","Marathahalli","Sarjapur Road","Koramangala"],"sameAs":["https://maps.app.goo.gl/aFny22T8D57v5dzK8"]
-        })}</script>
-      </Helmet>
       <Header />
       <main><Hero/><Services/><Areas/><Reviews/><WhyEasyFind/><ProofStrip/><HowItWorks/><FAQ/><Contact/></main>
       <Footer />
